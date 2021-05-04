@@ -187,12 +187,14 @@ ul.menu2 > li:hover > .sub_menu2 {
     
 }
 ul.menu2 > li > .sub_menu2> li a:hover,
+ul.menu2 > li:first-child > .sub_menu2> li:first-child a,
+ul.menu2 > li:nth-child(2) > .sub_menu2> li:first-child a,
 ul.menu2 > li > .sub_menu2> li a:hover.on{
     color: rgb(234, 170, 0);
     
 }
-
 ul.menu2 > li > a:hover,
+ul.menu2 > li:first-child > a,
 ul.menu2 > li > a:hover.on{
     border-bottom-color:rgb(234, 170, 0) ;  
    
