@@ -23,7 +23,14 @@
                     <p>예약/상담전화</p>
                     <p>043-269-6666</p>
                 </div>
+                
             </div>
+            <p class="cbox">
+                <input type="checkbox" id="pop_day"> 
+                <label for="pop_day" class="oneday">오늘 하루 닫기</label> 
+                
+                <span class="close">닫기</span>  </p>
+            
         </div>
 
         <div id="lnb">
@@ -89,72 +96,89 @@
                     
                 </ul>
                 
+                
                 <div class="right1">
                     <p>회원가입</p>
                     <p>로그인</p>
                 </div>
             </nav>
+            <div></div>
+            <!-- <div class="black"></div> -->
             
         </div>
     </header>
-    <!-- 본문 광고 충북대학교 글씨 -->
+    <!-- 퀵 메뉴 -->
+    <div class="quickmenu">
+        <div><span>충북대학교</span><span>병원</span></div>
+        <a href="#">진료 예약</a>
+        <a href="#">전문센터</a>
+        <a href="#">진료과</a>
+        <a href="#">Q&A</a>
+        <a href="#">전화번호</a>
+    </div>
+    <div class="quickmenu2">
+        <a href="#">&#8593;</a>
+        <a href="#">top</a>
+    </div>
     <!-- 충대병원 백그라운드 사진 -->
-    <div class="swibox">
-        <div class="swiper-container top">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide top01">
-                <section class="flexbox2">
-                    <div class="fontbox2">
-                        <div class="box2">
-                            <h2>충북대학교병원</h2>
-                            <p>충북 유일의 상급종합병원</p>
-                            <p>보건복지부 제4기(2021년~2023년) 상급종합병원 지정 평가</p>
-                            <p>자세히 보기</p>
-                        </div>
-                
+    <div class="flexbox2">
+        <div class="swibox">
+            <div class="swiper-container top">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide top01">
+                        <section class="flexbox2">
+                            <div class="fontbox2">
+                                <div class="box2">
+                                    <h2>충북대학교병원</h2>
+                                    <p>충북 유일의 상급종합병원</p>
+                                    <p>보건복지부 제4기(2021년~2023년) 상급종합병원 지정 평가</p>
+                                    <a href="#">자세히 보기</a>
+                                </div>
+    
+                            </div>
+    
+                        </section>
                     </div>
-                    
-                </section>
-              </div>
-              <div class="swiper-slide top02">
-                <section class="flexbox2">
-                    <div class="fontbox2">
-                        <div class="box2-1">
-                            <h2>충북대학교병원</h2>
-                            <p>4회 연속 “혈액투석 적정성 평가” 1등급 획득</p>
-                            <p>또한, 1등급이면서 상위 10기관에만 지급하는 가산지급대상에도 선정됐다.</p>
-                            <p>자세히 보기</p>
-                        </div>
-                
+                    <div class="swiper-slide top02">
+                        <section class="flexbox2">
+                            <div class="fontbox2">
+                                <div class="box2-1">
+                                    <h2>충북대학교병원</h2>
+                                    <p>4회 연속 “혈액투석 적정성 평가” 1등급 획득</p>
+                                    <p>또한, 1등급이면서 상위 10기관에만 지급하는 가산지급대상에도 선정됐다.</p>
+                                    <a href="#">자세히 보기</a>
+                                </div>
+    
+                            </div>
+    
+                        </section>
                     </div>
-                    
-                </section>
-              </div>
-              <div class="swiper-slide top03">
-                <section class="flexbox2">
-                    <div class="fontbox2">
-                        <div class="box2">
-                            <h2>충북대학교병원</h2>
-                            <p>코로나 관련 Q&A</p>
-                            <p></p>
-                            <p>자세히 보기</p>
-                        </div>
-                
+                    <div class="swiper-slide top03">
+                        <section class="flexbox2">
+                            <div class="fontbox2">
+                                <div class="box2">
+                                    <h2>충북대학교병원</h2>
+                                    <p>코로나 관련 Q&A</p>
+                                    <p></p>
+                                    <a href="#">자세히 보기</a>
+                                </div>
+    
+                            </div>
+    
+                        </section>
                     </div>
-                    
-                </section>
-              </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-          <div class="bluebox"></div>
+            <div class="bluebox"></div>
+        </div>
     </div>
     
-    <!-- 간편예약 검색 -->
+    <!-- 빠른 검색/예약 검색 -->
     <section class="flexbox3">
         <div class="bluebox2">
             <!-- 화살표 박스 -->
@@ -217,8 +241,8 @@
                     <div class="imap">
                         <div class="icon time"></div>
                         <div class="icfont">
-                            <p>오시는 길</p>
-                            <p>가장 가까운 지도.</p>
+                            <p>진료 예약</p>
+                            <p>편리하고 빠른<br>온라인 진료 예약.</p>
                         </div>
                         
                     </div>
@@ -227,8 +251,8 @@
                     <div class="imap">
                         <div class="icon doct"></div>
                         <div class="icfont">
-                            <p>오시는 길</p>
-                            <p>가장 가까운 지도.</p>
+                            <p>의료진 검색</p>
+                            <p>전문 의료진을<br>빠르게 검색합니다.</p>
                         </div>
                         
                     </div>
@@ -237,8 +261,8 @@
                     <div class="imap">
                         <div class="icon gun"></div>
                         <div class="icfont">
-                            <p>오시는 길</p>
-                            <p>가장 가까운 지도.</p>
+                            <p>건강검진 예약</p>
+                            <p>고객님의 건강을 위해<br>최선을 다 하겠습니다.</p>
                         </div>
                         
                     </div>
@@ -247,8 +271,8 @@
                     <div class="imap">
                         <div class="icon ple"></div>
                         <div class="icfont">
-                            <p>오시는 길</p>
-                            <p>가장 가까운 지도.</p>
+                            <p>진료이력서조회</p>
+                            <p>로그인 후 이용해주세요.</p>
                         </div>
                         
                     </div>
@@ -257,8 +281,8 @@
                     <div class="imap">
                         <div class="icon plus"></div>
                         <div class="icfont">
-                            <p>오시는 길</p>
-                            <p>가장 가까운 지도.</p>
+                            <p>입/퇴원안내</p>
+                            <p>친절한 임/퇴원<br>도와드리겠습니다.</p>
                         </div>
                         
                     </div>
@@ -267,8 +291,8 @@
                     <div class="imap">
                         <div class="icon note"></div>
                         <div class="icfont">
-                            <p>오시는 길</p>
-                            <p>가장 가까운 지도.</p>
+                            <p>서류발금안내</p>
+                            <p>온라인 인터넷<br>발급서비스.</p>
                         </div>
                         
                     </div>
@@ -277,8 +301,8 @@
                     <div class="imap">
                         <div class="icon qa"></div>
                         <div class="icfont">
-                            <p>오시는 길</p>
-                            <p>가장 가까운 지도.</p>
+                            <p>자주묻는 질문</p>
+                            <p>고객님의 건강을 위해<br>최선을 다 하겠습니다.</p>
                         </div>
                         
                     </div>
@@ -365,25 +389,102 @@
         </div>
         <!-- 의사소개 박스 -->
         <div class="doct5">
-            <div class="box5">
-                <div class="left5">
-                    <div class="icon5"></div>
-                    <p>내분비내과</p>
-                    <div class="btn4">
-                        <a href="#a">진료예약</a>
-                        <a href="#a">상세보기</a>
+            <div class="swiper-container doc">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="box5">
+                            <div class="left5">
+                                <div class="icon5"></div>
+                                <p>내분비내과</p>
+                                <div class="btn4">
+                                    <a href="#a">진료예약</a>
+                                    <a href="#a">상세보기</a>
+                                </div>
+                            </div>
+        
+                            <div class="center5">
+                                <p>오태근 <span class="cp5">의료진</span></p>
+                                <p>진료분야<br>내분비계, 갑상선, 당뇨</p>
+                                <p>진료시간<br>오전 - 월, 목<br>오후 - 화, 수</p>
+                            </div>
+        
+                            <!-- 오른쪽 의사 -->
+                            <div class="right5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box5">
+                            <div class="left5">
+                                <div class="icon6"></div>
+                                <p>신경외과</p>
+                                <div class="btn4">
+                                    <a href="#a">진료예약</a>
+                                    <a href="#a">상세보기</a>
+                                </div>
+                            </div>
+        
+                            <div class="center5">
+                                <p>이종범 <span class="cp5">의료진</span></p>
+                                <p>진료분야<br>경추, 오추디스크,<br>척추 수술 후 증후근,말초 신경 질환</p>
+                                <p>진료시간<br>오전 - 월, 목<br>오후 - 화, 수</p>
+                            </div>
+        
+                            <!-- 오른쪽 의사 -->
+                            <div class="rightd6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box5">
+                            <div class="left5">
+                                <div class="icon5"></div>
+                                <p>내분비내과</p>
+                                <div class="btn4">
+                                    <a href="#a">진료예약</a>
+                                    <a href="#a">상세보기</a>
+                                </div>
+                            </div>
+        
+                            <div class="center5">
+                                <p>오태근 <span class="cp5">의료진</span></p>
+                                <p>진료분야<br>내분비계, 갑상선, 당뇨</p>
+                                <p>진료시간<br>오전 - 월, 목<br>오후 - 화, 수</p>
+                            </div>
+        
+                            <!-- 오른쪽 의사 -->
+                            <div class="right5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box5">
+                            <div class="left5">
+                                <div class="icon5"></div>
+                                <p>내분비내과</p>
+                                <div class="btn4">
+                                    <a href="#a">진료예약</a>
+                                    <a href="#a">상세보기</a>
+                                </div>
+                            </div>
+        
+                            <div class="center5">
+                                <p>오태근 <span class="cp5">의료진</span></p>
+                                <p>진료분야<br>내분비계, 갑상선, 당뇨</p>
+                                <p>진료시간<br>오전 - 월, 목<br>오후 - 화, 수</p>
+                            </div>
+        
+                            <!-- 오른쪽 의사 -->
+                            <div class="right5">
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="center5">
-                    <p>오태근 <span class="cp5">의료진</span></p>
-                    <p>진료분야<br>내분비계, 갑상선, 당뇨</p>
-                    <p>진료시간<br>오전 - 월, 목<br>오후 - 화, 수</p>
-                </div>
-
-                <!-- 오른쪽 의사 -->
-                <div class="right5">
-                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -577,7 +678,7 @@
                             -황열 예방 접종 및 증명서<br>
                             발급 안내</p>
                     </div>
-                    <div class="checkbox">
+                    <div class="checkbox2">
                         <div class="font7">
                             <p>입찰정보</p>
                             <a href="#a">+</a>
@@ -607,7 +708,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="btn5">
+                    <div class="btn55">
                         <a href="#a">
                             <div class="fbox7">
                                 <div class="if c"></div>
@@ -632,16 +733,20 @@
                 </div>
 
                 <div class="ckbox">
-                    <p>일반직 채용 공고</p>
+                    <a href="#a">일반직 채용 공고</a>
+                    <a href="#a">></a>
                 </div>
                 <div class="ckbox">
-                    <p>전문의 채용 공고</p>
+                    <a href="#a">전문의 채용 공고</a>
+                    <a href="#a">></a>
                 </div>
                 <div class="ckbox">
-                    <p>전임의/전공의 채용 공고</p>
+                    <a href="#a">전임의/전공의 채용 공고</a>
+                    <a href="#a">></a>
                 </div>
                 <div class="ckbox">
-                    <p>시간제 채용 공고</p>
+                    <a href="#a">시간제 채용 공고</a>
+                    <a href="#a">></a>
                 </div>
                 
             </div>
@@ -667,16 +772,21 @@
                 <p>환자권리와 의무</p>
                 <p>경영정보 공개</p>
                 <p>복지, 보조금 부정신고</p>
+                <div class="face"><a href="http://www.facebook.com/cbnuh" target="_blank"><img src="../images/pp/face_09.png" alt="페이스북" style="width:40px; position:relative; top:-3px"></a></div>
             </div>
+            
             <div class="font99">
                 <p>(28644) 충북 청주시 서원구 1순환로 776 (개신동)</p>
                 <p>대표전화 : 043-269-6114</p>
-                
+            </div>
+            <div class="font999">
+                <p>COPTRIGHT(C) CHUNGBUK NATIONAL UNIVERSITY HOSPITAL. ALL RIGHTS RESERVED</p>
             </div>
         </div>
     </footer>
-
+    <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
     <script src="../js/chungbuk.js"></script>
 </body>
 </html>

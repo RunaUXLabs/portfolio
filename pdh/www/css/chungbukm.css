@@ -14,17 +14,28 @@
 	src : url('../webfont/KoPubDotumMedium.eot');
 	src : url('../webfont/KoPubDotumMedium.woff') format('woff');
 }
+.quickmenu{
+    display: none;
+}
+.quickmenu2{
+    display: none;
+}
+#lnb{display: none;}
 .inner{
     width: 100%;
     margin: 0 auto;
     position: relative;
 }
 .flexbox1{
-    display: none;
+    width: 100%; height: auto;
+    position: fixed; top: 0; left: 0;
+    display: flex; flex-direction: column;
+    z-index: 100;
+    background: white;
 }
 .news{
     width: 100%;
-    height: 105px;
+    height: 67px;
     background: url(../images/pp/news_01.jpg) 0 0 no-repeat;
 }
 .leftlogo{
@@ -45,7 +56,7 @@
     flex-direction: row;
 }
 .bgbox1{
-    width: 100%; height: 105px;
+    width: 100%; height: 67px;
     margin: 0 auto;
     align-items: center;
     display: flex;
@@ -53,38 +64,38 @@
     justify-content: space-between;
 }
 .call1{
-    background: url(../images/pp/callicon_03.png) 0 0 no-repeat;
-    width: 100%; height: 60px;
+    background: none;
+    width: 72%; height: 60px;
     align-items: center;
     display: flex;
     flex-direction: row;
 }
 .call1 > p:nth-child(1){
-    margin-left: 50px; color: white;
+    margin-left: 5px; color: white;
     font-family : KoPubDotumMedium;
-    font-size: 30px;
+    font-size: 15px;
 }
 .call1 > p:nth-child(2){
-    color: white; margin-left: 10px;
+    color: white; margin-left: 1px;
     font-family : KoPubDotumBold;
-    font-size: 40px;
+    font-size: 15px;
 }
 .call2{
-    background: url(../images/pp/callicon_05.png) 0 0 no-repeat;
-    width: 100%; height: 60px;
+    background: none;
+    width: 82%; height: 60px;
     align-items: center;
     display: flex;
     flex-direction: row;
 }
 .call2 > p:nth-child(1){
-    margin-left: 70px; color: white;
+    margin-left: 5px; color: white;
     font-family : KoPubDotumMedium;
-    font-size: 27px;
+    font-size: 15px;
 }
 .call2 > p:nth-child(2){
-    color: white; margin-left: 10px;
+    color: white; margin-left: 2px;
     font-family : KoPubDotumBold;
-    font-size: 40px;
+    font-size: 15px;
 }
 .nav1{
     display: none;
@@ -95,7 +106,7 @@
 .flexbox2{
     width: 100%;
     height: 630px;
-    display: flex;
+    display: flex; top: 0;
     flex-direction: column;
     position: relative;
 }
@@ -424,7 +435,7 @@
     width: 343px; height: 32px; 
 }
 .icfont > p{
-    font-size: 13px;
+    font-size: 11px;
     font-family : KoPubDotumMedium;
     padding-left: 0; 
 }
@@ -639,6 +650,26 @@
     flex-direction: column;
     position: relative;
 }
+.doc.swiper-container{
+    width: 100%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.doc .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doc .swiper-button-next{
+    display: none;
+}
+.doc .swiper-button-prev{
+    display: none;
+}
 .left5{
     width: 100%;
     height: 289px;
@@ -702,6 +733,9 @@
 }
 
 .right5{
+    display: none;
+}
+.rightd6{
     display: none;
 }
 .flexbox6{
@@ -827,7 +861,7 @@
 }
 .flexbox7{
     width: 100%;
-    height: 695px;
+    height: 100%;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
@@ -856,7 +890,7 @@
     justify-content: space-between;
 }
 .bgbox2{
-    width: 100%; height: 260px;
+    width: 100%; height: 300px;
     margin-top: 50px;
 
 }
@@ -897,7 +931,7 @@
     width: 42%; height: 95%; margin-left: 5px;
 }
 .c{background: url(../images/pp/newi_19.png) 0 0 no-repeat; background-size: cover;
-    width: 48%; height: 97%; margin-left: 5px;
+    width: 48%; height: 93%; margin-left: 5px;
 }
 .d{background: url(../images/pp/newi_22.png) 0 0 no-repeat; background-size: cover;
     width: 37%; height: 93%; margin-left: 5px;
@@ -915,7 +949,7 @@
 .c:hover{
     background: url(../images/pp/iiii_10.png) 0 0 no-repeat;
     background-size: cover;
-    width: 48%; height: 97%; margin-left: 5px;
+    width: 48%; height: 93%; margin-left: 5px;
 }
 .d:hover{
     background: url(../images/pp/iiii_14.png) 0 0 no-repeat;
@@ -944,6 +978,17 @@
     position: relative; margin: 0 auto;
 }
 .checkbox > p:last-child{
+    width: 70%; margin: 0 auto;
+    font-size: 20px;
+    font-family : KoPubDotumMedium;
+}
+.checkbox2{
+    width: 100%; height: 294px;
+    display: flex;
+    flex-direction: column; justify-content: center;
+    position: relative; margin: 0 auto;
+}
+.checkbox2 > p:last-child{
     width: 70%; margin: 0 auto;
     font-size: 20px;
     font-family : KoPubDotumMedium;
