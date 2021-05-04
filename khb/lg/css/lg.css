@@ -93,9 +93,6 @@ nav .menu > li > a{
     position: relative;
     text-align: center;
 }
-nav .menu > li > a:hover{
-    color: #c60d41;
-}
 nav .menu > li:nth-child(2) > a{
     display: block;
     background: url(../images/circle_logo.png) 0 0 no-repeat;
@@ -133,11 +130,6 @@ nav .menu .brandmenu > li > a
     font-size: 1.4rem;
     font-weight: 400;
     color: #000;
-    /* width: 200px; */
-}
-nav .menu .submenu > li > a:hover,
-nav .menu .brandmenu > li > a:hover{
-    color: #c60d41;
 }
 nav .menu .submenu .submenu_first,
 nav .menu .brandmenu .submenu_first{
@@ -185,9 +177,6 @@ nav .menu .submenu .submenu_first > li > a{
     font-weight: 400;
     color: #262626;
 }
-nav .menu .submenu .submenu_first > li > a:hover{
-    color: #c60d41;
-}
 nav .menu .brandmenu li:first-child .submenu_first{
     flex-flow: column wrap;
     justify-content: flex-start;
@@ -203,16 +192,18 @@ nav .menu .brandmenu .submenu_first > li > a{
     font-weight: 400;
     color: #202020;
 }
-nav .menu .brandmenu .submenu_first > li > a:hover{
-    color: #c60d41;
-}
-nav .menu .submenu .submenu_first .submenu_second,
 nav .menu .brandmenu .submenu_first .submenu_second{
     width: 15%;
     display: flex;
     flex-flow: column wrap;
     position: absolute;
-    top: 50px;
+    top: 60px;
+}
+nav .menu .submenu .submenu_first .submenu_second{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
 }
 nav .menu .brandmenu .submenu_first .submenu_second{
     width: 12.5%;
@@ -223,8 +214,7 @@ nav .menu .brandmenu li:last-child .submenu_first .submenu_second{
 nav .menu .submenu .submenu_first .submenu_second > li,
 nav .menu .brandmenu .submenu_first .submenu_second > li{
     width: 100%;
-    height: 30px;
-    padding-top: 20px;
+    height: 40px;
 }
 nav .menu .submenu .submenu_first .submenu_second > li > a,
 nav .menu .brandmenu .submenu_first .submenu_second > li> a{
@@ -232,10 +222,6 @@ nav .menu .brandmenu .submenu_first .submenu_second > li> a{
     color: #303030;
     height: 40px;
     line-height: 40px;
-}
-nav .menu .submenu .submenu_first .submenu_second > li > a:hover,
-nav .menu .brandmenu .submenu_first .submenu_second > li> a:hover{
-    color: #c60d41;
 }
 nav .menu .submenu .submenu_first .submenu_second > li > a{
     font-size: 1rem;
@@ -293,6 +279,15 @@ nav .menu .submenu li:nth-child(3) .submenu_first > li:first-child::before{
 .searching > span > i{
     font-size: 1.3rem;
     color: #404040;
+}
+nav .menu li a:hover,
+nav .menu .submenu li a:hover,
+nav .menu .submenu .submenu_first li a:hover,
+nav .menu .submenu .submenu_first .submenu_second li a:hover,
+nav .menu .brandmenu li a:hover,
+nav .menu .brandmenu .submenu_first li a:hover,
+nav .menu .brandmenu .submenu_first .submenu_second li a:hover{
+    color: #c60d41;
 }
 
 /* common style */
@@ -536,6 +531,23 @@ section.business{
     font-weight: 500;
     color: #fff;
     opacity: 0;
+}
+.business h2 > a{
+    color: #fff;
+}
+.business h2 > a::after{
+    display: block;
+    content: "";
+    width: auto;
+    height: 3px;
+    background-color: transparent;
+}
+.business h2 > a:hover::after{
+    background-color: #c60d41;
+    transition: all 1s;
+}
+.business h2 > a > span{
+    color: #c60d41;
 }
 .basicSwiper .swiper-slide.swiper-slide-active .business h2{
     animation: arrowAnimation 2s ease-out both; 
