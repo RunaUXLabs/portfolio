@@ -186,11 +186,13 @@ header > .top::after {
 }
 .moreBt::before {
     color: #fff;
-    left: 40%;
     top: 50%;
+    right: unset;
+    left: 40%;
     transform: translateY(-50%);
     font-size: 1rem;
 }
+
 .swiper-pagination.main-paging {
     left: unset;
     right: 20px;
@@ -225,7 +227,7 @@ section {
 
 section h1 {
     font-size: 1.25rem;
-    margin: 0 0 10px 0;
+    margin: 20px 0 40px;
     text-align: center;
 }
 
@@ -244,16 +246,31 @@ section h1 {
     margin: 0 0 10% 0;
 }
 .sec01 > .inner > .textG > .moreBt {
+    /* width: 200px;
+    padding: 0 50px;
+    border: 1px solid #444;
+    bottom: -40px; */
+
+    width: 30px;
+    padding: 0;
+    font-size: 1px;
+    color: transparent;
     position: absolute;
     bottom: 0;
     border: 2px solid #999;
     left: 50%;
+    transform: translateX(-50%);
+}
+.sec01 > .inner > .textG > .moreBt:hover {
+    border-color: #999;
+    background: transparent;
+    color: transparent;
+    opacity: .6;
 }
 .sec01 > .inner > .textG > .moreBt::before {
     color: #999;
-    left: -40%;
-    top: 50%;
-    transform: translateY(-50%);
+    /* top: 50%;
+    transform: translateY(-50%); */
 }
 .sec01 > .inner > .brandVideo {
     width: 100%;
@@ -268,6 +285,9 @@ section h1 {
 }
 .tabMenu {
     justify-content: center;
+}
+.favtab a {
+    font-size: 1rem;
 }
 .box {
     padding: 20px;
@@ -375,23 +395,34 @@ section h1 {
 .store > span {
     margin: 0;
     color: white;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    font-size: 1.25rem;
 }
 .store > p {
     display: none;
 }
 .store > .moreBt {
-    bottom: unset;
-}
-.store:hover > .moreBt {
+    width: 30px;
+    height: 30px;
     color: transparent;
     text-shadow: none;
+    bottom: unset;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-.topBt {
-    right: unset;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+.store > .moreBt::before {
+    font-size: 1rem;
+    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+}
+.store:hover > .moreBt:hover {
+    background: none;
+    border: 2px solid #fff;
+    opacity: .5;
+}
+.topBt.on {
+    right: 40px ;
+    bottom: 40px ;
+    /* z-index: 300; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
 }
 footer {
     padding: 5% 0 10%;

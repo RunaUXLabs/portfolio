@@ -227,25 +227,28 @@ header {
 }
 .moreBt {
     display: inline-block;
-    width: 100px;
-    height: 20px;
-    line-height: 20px;
-    font-weight: 700;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    /* border: 1px solid #fff; */
+    /* font-size: .8rem; */
+    font-weight: 600;
     cursor: pointer;
     position: relative;
-    transition: opacity 0.2s;
+    transition: all 0.2s;
 }
 .moreBt::before {
     display: inline-block;
     content: '\f054';
     font-size: 0.8rem;
-    font-weight: 800;
+    font-weight: 400;
     position: absolute;
-    right: -10px;
+    right: 25px;
     top: 0;
 }
 .moreBt:hover{
-    opacity: 0.5;
+    opacity: 0.6;
 }
 .swiper-pagination.main-paging {
     width: auto;
@@ -300,7 +303,17 @@ section h1 {
     word-break: keep-all;
 }
 .sec01 > .inner > .textG > .moreBt {
+    /* color: #fff; */
+    width: 200px;
+    padding: 0 50px;
+    border: 1px solid #444;
     bottom: -40px;
+}
+.sec01 > .inner > .textG > .moreBt:hover {
+    border-color: transparent;
+    background: #7d6c23;
+    color: #fff;
+    opacity: .9;
 }
 .sec01 > .inner > .brandVideo {
     width: 50%;
@@ -322,19 +335,18 @@ section h1 {
 .tabMenu {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     margin: 0 0 20px 0;
 }
 .favtab a {
     margin: 0 20px 0 0;
     color: #b8b8b8;
     cursor: pointer;
+    font-size: 1.25rem;
     font-weight: 500;
 }
 .favtab.on a { color: #000; }
 .favtab a:hover { color: #000; }
-
-
 .box { display: none; }
 .box.on {
     display: block;
@@ -471,6 +483,7 @@ section h1 {
     background-size: 80%;
 }
 .product > span {
+    font-size: 1.25rem;
     font-weight: 600;
     text-align: center;
     cursor: pointer;
@@ -481,6 +494,7 @@ section h1 {
     color: #999;
 }
 
+.sec03 { margin: 0;}
 .sec03 h2 {
     margin: 0 0 40px 0;
     text-align: center;
@@ -489,7 +503,7 @@ section h1 {
 .sec03 .bg {
     width: 100%;
     height: 650px;
-    background: url(../images/jakomo/nav/better-me.jpg) 50% 70% no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.1) 50% , rgba(0,0,0,0.1) 50%), url(../images/jakomo/nav/better-me.jpg) 50% 70% no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -508,8 +522,8 @@ section h1 {
 }
 .expandBt {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 4px solid #fff;
     display: flex;
@@ -518,7 +532,7 @@ section h1 {
     color: #fff;
     opacity: 0.9;
     position: absolute;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
@@ -543,9 +557,7 @@ section h1 {
     top: 250px;
     right: 300px;
 }
-
-.popupBg,
-.popup {
+.popupBg, .popup {
     display: none;
 }
 .popupBg.on {
@@ -556,7 +568,7 @@ section h1 {
     z-index: 300;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .popup.on {
     display: block;
@@ -593,26 +605,30 @@ section h1 {
 }
 .popup > .popupPic .circle {
     display: flex;
-    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80%;
     height: 80%;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     opacity: 0;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
     transition: all .8s;
     cursor: pointer;
 }
 .popup > .popupPic:hover .circle {
-    opacity: 100;
+    opacity: .9;
 }
 .popup > .popupPic span {
+    margin: 0 0 20px 0;
     font-size: 1.5rem;
     color: #fff;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+.popup > .popupPic span:nth-child(2) {
+    font-size: 3rem;
+    font-weight: 300;
 }
 .popup.u0 {
     top: 100px;
@@ -649,16 +665,25 @@ section h1 {
 }
 
 .sec04 {
-    background: linear-gradient(#f3f3f3 70%, #ffffff 30%) 0 0 no-repeat;
-    padding: 80px 0 0 0;
+    background: linear-gradient(#f3f3f3 80%, #ffffff 20%) 0 0 no-repeat;
+    padding: 200px 0 0 0;
     position: relative;
 }
 .sec04 .inner{
     position: relative;
 }
 .sec04 .moreBt {
+    width: 200px;
+    padding: 0 50px;
+    border: 1px solid #666;
     position: absolute;
-    right: 10px;
+    right: 0;
+}
+.sec04 .moreBt:hover {
+    border-color: transparent;
+    background: #7d6c23;
+    color: #fff;
+    opacity: .9;
 }
 .sec04 .mediaG{
     margin: 120px 0 200px ;
@@ -825,65 +850,101 @@ section h1 {
 .storeG {
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 .store {
-    width: 25%;
+    width: 24%;
     height: 500px;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     justify-content: flex-end;
     position: relative;
-    /* color: #fff; */
 }
 .store > span {
-    margin: 0 0 20px 0;
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-.store > p {
-    height: 40px;
-    margin: 0 0 50px 0;
-    word-break: keep-all;
-    font-size: 0.8rem;
-}
-.store > .moreBt {
-    bottom: 20px;
-}
-.store:hover > span, .store:hover > p, .store:hover > .moreBt {
     color: white;
+    margin: 0 0 45px 0;
+    font-size: 2rem;
+    /* font-weight: 00; */
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
 }
+.store > p {
+    margin: 0 0 80px 0;
+    height: 40px;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    word-break: keep-all;
+    opacity: 0;
+    transition: all 1s;
+    /* font-size: 0.8rem; */
+}
+.store:hover > span {
+    opacity: .5;
+}
+.store:hover > p {
+    opacity: 1;
+}
+.store > .moreBt {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+    bottom: 20px;
+    color: transparent;
+    font-size: 1px;
+    opacity: 0;
+}
+.store > .moreBt::before {
+    color: #fff;
+    top: 50%;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 1.5rem;
+    
+}
+.store:hover > .moreBt {
+    border: 2px solid #fff;
+    opacity: 1;
+}
+.store:hover > .moreBt:hover {
+    background: #7d6c23;
+    border: none;
+}
 .store.s0{
-    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url(../images/jakomo/our-space/showroom1.png) 50% 50% no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/jakomo/our-space/showroom1.png) 50% 50% no-repeat;
     background-size: 550px;
-    background-blend-mode: screen;    
+    background-blend-mode: multiply;    
 }
 .store.s0:hover {
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/jakomo/our-space/showroom1.png) 50% 50% no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/jakomo/our-space/showroom1.png) 50% 50% no-repeat;
     background-size: 600px;
     background-blend-mode: multiply;
     transition: all 1s;
 }
 .store.s1{
-    background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(../images/jakomo/our-space/showroom2.png) 50% 50% no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/jakomo/our-space/showroom2.png) 50% 50% no-repeat;
     background-size: 550px;
-    background-blend-mode: screen;
+    background-blend-mode: multiply;
 }
 .store.s1:hover {
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/jakomo/our-space/showroom2.png) 50% 50% no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/jakomo/our-space/showroom2.png) 50% 50% no-repeat;
     background-size: 600px;
     background-blend-mode: multiply;
     transition: all 1s;
 }
 .store.s2{
-    background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(../images/jakomo/our-space/showroom3.png) 50% 50% no-repeat;
-    background-size: 500px;
-    background-blend-mode: screen;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/jakomo/our-space/showroom3.png) 50% 50% no-repeat;
+    background-size: 600px;
+    background-blend-mode: multiply;
 }
 .store.s2:hover {
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/jakomo/our-space/showroom3.png) 50% 50% no-repeat;
-    background-size: 550px;
+    background-size: 650px;
     background-blend-mode: multiply;
     transition: all 1s;
 }
@@ -944,13 +1005,15 @@ section h1 {
     background-blend-mode: multiply;
     transition: all 1s;
 } */
-.topBt {
+
+.topBt { opacity: 0;}
+.topBt.on {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     right: 100px;
-    bottom: 0;
+    bottom: 300px;
     z-index: 300;
     width: 50px;
     height: 50px;
@@ -958,17 +1021,24 @@ section h1 {
     border-radius: 50%;
     background-color: #000;
     color: #fff;
+    transition: all .5s ease;
+    opacity: 1;
+}
+.topBt.on:hover {
+    background-color: #7d6c23;
 }
 footer {
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 40px;
     position: relative;
     background-color: rgb(80, 80, 80);
+    text-align: center;
 }
 footer .logo{
     background-position-y: -23px;
-    top: 20px;
+    top: 40px;
+    left: 40px;
     transform: translateY(0);
 }
 footer .menu {
@@ -1000,8 +1070,8 @@ footer .tel > span {
 }
 footer .sns {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 40px;
+    right: 40px;
     display: flex;
     flex-direction: row;
 }
@@ -1117,7 +1187,7 @@ footer .sns > a {
     margin: 0 0 40px 0;
     width: 100%;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 700;
     color: #000;
 }
 .gnb2 .depth1 > a:hover,
@@ -1207,4 +1277,59 @@ footer .sns > a {
 
 .gnbBg.none{
     display: none;
+}
+.vrBanner {
+    margin-bottom: 150px;
+}
+.vrBanner > div {
+    display: flex;
+    padding: 40px;
+    height: 400px;
+    background: url(../images/jakomo/vrBanner/vrBannerBg.png) 50% 50% ;
+    background-size: cover;
+}
+.vrText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.vrText img {
+    width: 40px;
+    height: 40px;
+    margin: 0 0 20px 0;
+}
+.vrText span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+.vrText span:nth-of-type(1){
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.vrText p {
+    margin: 20px 0;
+    color: #fff;
+}
+.vrBt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 200px;
+    /* height: 40px; */
+    background: transparent;
+    border: 1px solid #7d6c23;
+    color: #fff;
+    transition: all .5s ease;
+    opacity: .8;
+    cursor: pointer;
+}
+.vrBt:hover {
+    background: #7d6c23;
+}
+.vrPic {
+    width: 50%;
 }

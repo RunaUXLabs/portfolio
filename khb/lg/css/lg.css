@@ -145,9 +145,11 @@ nav .menu .brandmenu .submenu_first{
     display: none;
 }
 nav .menu .submenu li:first-child .submenu_first,
-nav .menu .submenu li:nth-child(2) .submenu_first,
 nav .menu .submenu li:nth-child(3) .submenu_first{
     height: 35vh;
+}
+nav .menu .submenu li:nth-child(2) .submenu_first{
+    height: 40vh;
 }
 nav .menu .submenu li:nth-child(4) .submenu_first{
     height: 9vh;
@@ -159,7 +161,7 @@ nav .menu .brandmenu li:nth-child(2) .submenu_first{
     height: 35vh;
 }
 nav .menu .brandmenu li:last-child .submenu_first{
-    height: 55vh;
+    height: 56vh;
 }
 nav .menu .submenu > li:hover .submenu_first,
 nav .menu .brandmenu > li:hover .submenu_first{

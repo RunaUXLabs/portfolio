@@ -88,8 +88,8 @@ nav a.logo{
 nav>ul{
     font-size: 17px;
     display: flex;
-    width: 60%;
-    justify-content: space-between;
+    width: 80%;
+    justify-content: space-around;
 }
 nav>ul>li{
     height: 100px;

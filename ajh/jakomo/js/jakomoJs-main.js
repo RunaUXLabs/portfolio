@@ -143,6 +143,7 @@ if (iw > 641) {
   });
 }
 
+
 $(function () {
   $(".menuBt").click(function () {
     $(".gnbBg").addClass("on");
@@ -168,22 +169,22 @@ $(function () {
   $(".expandBt").addClass(function (index) {
     return "e" + index;
   })
-  $(".expandBt").attr('data-id', function(index) {
-    return "e" + index ;
+  $(".expandBt").attr('data-id', function (index) {
+    return "e" + index;
   });
   $(".popup").addClass(function (index) {
     return "u" + index;
   })
-  $(".popup").attr('id', function(index) {
-    return "e" + index ;
+  $(".popup").attr('id', function (index) {
+    return "e" + index;
   });
   $(".expandBt").click(function () {
     $(".popupBg").addClass("on");
     $("#" + $(this).data('id')).addClass("on")
       .siblings().removeClass("on");
-      return false;
+    return false;
   });
-  $(".popup .close").click(function() {
+  $(".popup .close").click(function () {
     $(".popupBg").removeClass("on");
   })
 
@@ -195,11 +196,11 @@ $(function () {
   });
 
   // sec04 modal
-  $(".media i").attr('data-id', function(index) {
-    return "m" + index ;
+  $(".media i").attr('data-id', function (index) {
+    return "m" + index;
   });
-  $(".modalContent").attr('id', function(index) {
-    return "m" + index ;
+  $(".modalContent").attr('id', function (index) {
+    return "m" + index;
   });
 
   $(".media i").click(function () {
@@ -208,29 +209,38 @@ $(function () {
       .siblings().removeClass("on");
   });
 
-  $(".sec04 .modal li > span").click(function() {
+  $(".sec04 .modal li > span").click(function () {
     $(".modalBg").removeClass("on");
   })
 });
 
-$(document).scroll(function() {
+$(document).scroll(function () {
   var scroll = $(window).scrollTop();
-  if (scroll > 300){
-    $("header > .top").addClass( "hideBar" );
+  if (scroll > 300) {
+    $("header > .top").addClass("hideBar");
   }
-  else if (scroll < 299){
-    $( "header > .top" ).removeClass( "hideBar" );
+  else if (scroll < 299) {
+    $("header > .top").removeClass("hideBar");
   }
 });
 
-var lastWidth = $(window).width();
-$(window).resize(function(){
-    if($(window).width()!=lastWidth){
-        location.reload();
-        lastWidth = $(window).width();
-        return false;
-    }
-});
+// $(document).scroll(function () {
+//   var scroll = $(window).scrollTop();
+//   if (scroll > 800) {
+//     $(".topBt").addClass("on");
+//   } else if (scroll < 800) {
+//     $(".topBt").removeClass("on");
+//   }
+// });
+
+// var lastWidth = $(window).width();
+// $(window).resize(function () {
+//   if ($(window).width() != lastWidth) {
+//     location.reload();
+//     lastWidth = $(window).width();
+//     return false;
+//   }
+// });
 
 // 모바일 
 // var iw = window.innerWidth;
@@ -252,7 +262,18 @@ $(window).resize(function(){
 //   });
 // }
 
-if ($(window).width() < 641) {
+
+if ($(window).width() > 640 ) {
+  $(document).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > 800) {
+      $(".topBt").addClass("on");
+    } else if (scroll < 800) {
+      $(".topBt").removeClass("on");
+    }
+  });
+
+} else if ($(window).width() < 641) {
   // 메뉴버튼
   $(".menuBt").click(function () {
     $(".gnb").addClass("on");
@@ -268,5 +289,15 @@ if ($(window).width() < 641) {
     $(".gnb .depth1 > a").not(this).siblings().hide();
     return false;
   });
+
+  $(document).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > 300) {
+      $(".topBt").addClass("on");
+    } else if (scroll < 300) {
+      $(".topBt").removeClass("on");
+    }
+  });
+
 }
 

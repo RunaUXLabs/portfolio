@@ -53,8 +53,8 @@ nav a.logo{
 nav>ul{
     font-size: 17px;
     display: flex;
-    width: 60%;
-    justify-content: space-between;
+    width: 80%;
+    justify-content: space-around;
 }
 nav>ul>li{
     height: 100px;
@@ -126,32 +126,88 @@ footer>.inner{
 footer .left{font-size: 13px;}
 footer .right{font-size: 25px;}
 
-.sec1{
-    height: 900px;
-}
-.contentsTitGroup{
-    padding-top: 170PX;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
-}
-.contentsTitGroup>h4{font-size: 15px;}
-.contentsTitGroup>h2::after,
-.contentsTitGroup>h2::before{
-    display: inline-block;
-    background: #f9661e;
-    content: " ";
-    width: 50px;
-    height: 2px;
-    vertical-align: middle;
-}
-.contentsTitGroup>h2::after{margin-left: 20px;}
-.contentsTitGroup>h2::before{margin-right: 20px;}
+.sec1{margin: 150px 0 200px 0;}
+.title{margin-bottom: 50px;}
+.title>h2{font-size: 50px;}
+.title>p{color: #f9661e;}
+.sec1 .inner{position: relative;}
 .sec1 .bg{
     background: url(../img/sub2/bg.png) center no-repeat;
     width: 100%;
-    background-size: 100%;
     height: 500px;
+}
+.sec1 .text{
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    width: 550px;
+    height: 400px;
+    background: #f9661e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.set_box{
+    display: flex;
+    justify-content: space-between;
+}
+.set_box.fr{margin-top: 250px;}
+.sec2 .set_box .set{
+    background: url(../img/sub2/sec2/1.png) center no-repeat;
+    width: 280px;
+    height: 600px;
+    margin-bottom: 200px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+.sec2 .set_box .set:nth-child(3){background: url(../img/sub2/sec2/2.png) center no-repeat;}
+.sec2 .set_box .set:nth-child(4){background: url(../img/sub2/sec2/4.png) center no-repeat;}
+.sec2 .set_box .set:nth-child(2){background: url(../img/sub2/sec2/3.png) center no-repeat;}
+
+.sec2 .set>.text{
+    border: 1px solid #fff;
+    width: 240px;
+    height: 200px;
+    position: absolute;
+    padding: 20px;
+    color: #fff;;
+}
+.sec2 .set:hover .text{
+    color: #282b91;
+    background: #fff;
+    transition: all 0.5s;
+}
+.sec2 .set>.text>h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.sec3{
+    background: rgb(233, 233, 233);
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+.sec3 .inner{
+    display: flex;
+    justify-content: space-between;
+}
+.sec3 .set{
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+.sec3 .set:hover{
+    background: #282b91;
+    color: #fff;
+    transition: all 0.5s;
 }
