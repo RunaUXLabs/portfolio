@@ -1,0 +1,925 @@
+@charset "UTF-8";
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid olive; */
+    font-family: 'Nanum Myeongjo', serif;
+    list-style: none;
+}
+.inner{
+    width: 1500px;
+    margin: 0 auto;
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+h2{
+    font-size: 2.5rem;
+    text-align: center;
+    color: #88794b;
+    position: relative;
+    margin: 100px 0 50px 0;
+    font-weight: 800;
+}
+
+.se4 h2{
+    margin: 50px 0;
+}
+
+h2::after{
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: #b9ab80;
+    position: absolute;
+    top: 65px;
+    left: 750px;
+}
+.se4 h2::after{
+    display: none;
+}
+
+h3{
+    font-size: 1.7rem;
+}
+p{
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+/* 코로나 팝업창 */
+.cpopup{
+    padding:25px;
+    width: 500px;
+    height: 700px;
+    position: fixed;
+    top: 50px;
+    left: 700px;
+    background: white;
+    border: 1px solid #9a9a9a;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cpopup h2::after{
+    display: none;
+}
+.cpopup > *{
+    margin: 10px 0;
+}
+.cpopup > div{
+    cursor: pointer;
+}
+form label{ display: none; }
+form a, 
+form a:visited{ 
+    text-decoration: none;
+    color: #444;
+    display: block;
+    margin: 0 0 0 10px;
+}
+
+/* header */
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.mMenu{
+    display: none;
+}
+.header .logo{
+    width: 500px;
+    height: 150px;
+    background: url(../images/lecordonbleu/logo.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: block;
+}
+.header .search{
+    width: 500px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.msearch{
+    display: none;
+}
+.span a{
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+}
+.form{
+    display: flex;
+    align-items: center;
+}
+.header form input{
+    width: 100px;
+    height: 20px;
+    margin-right: 10px;
+}
+.langbutton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.langbutton > a{
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* nav */
+nav{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 150;
+    background-color: white;
+}
+.micon, .mX{
+    display: none;
+}
+.menu{
+    height: 70px;
+    line-height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    font-size: 20px;
+
+}
+.menu > li a{
+    text-decoration: none;
+    color: black;
+}
+.menu > li .sub_menu{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    z-index: 100;
+}
+.menu .sub_menu > li{
+    margin: 0 20px;
+}
+.menu li:hover a,
+.menu li:hover{
+    color: rgb(152,136,84);
+}
+.menu li:hover .sub_menu,
+.menu li.sub_menu:hover{
+    height: 70px;
+    transition: height 1s;
+    color: white;
+    background-color: rgba(154, 169, 193, 0.5);
+}
+
+
+/* quickmenu */
+.quickmenu{
+    position: fixed;
+    top: 500px;
+    right: 50px;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.quickmenu > div {
+    width: 80px;
+    height: 60px;
+    background-color: rgb(152,136,84);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.quickmenu > a {
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(152,136,84);
+    color: white;
+    transition: all 1s;
+    text-decoration: none;
+}
+.quickmenu > a:hover{
+    width: 160px;
+    background-color: rgb(0, 35, 107);
+}   
+
+
+
+/* visual */
+.visual{
+    height: 700px;
+    /* background-size: cover; */
+    color: white;
+    position: relative;
+}
+.visual h1{
+    margin-bottom: 20px;
+}
+.visual .swiper-slide{
+    /* width: 100%; */
+    height: 100%;
+    padding: 150px;
+}
+.swiper-slide.vsw0{
+    background:url(../images/lecordonbleu/mainkorea3.jpg) 50% 50%;
+    background-size: cover;
+}
+.swiper-slide.vsw1{
+    background:url(../images/lecordonbleu/mainkorea2.jpg) 50% 50%;
+    background-size: cover;
+}
+.swiper-slide.vsw2{
+    background:url(../images/lecordonbleu/mainkorea.jpg) 50% 50%;
+    background-size: cover;
+}
+.swiper-slide.vsw3{
+    background:url(../images/lecordonbleu/main1.jpg) 50% 50%;
+    background-size: cover;
+}
+.swiper-slide.vsw4{
+    background:url(../images/lecordonbleu/66751.jpg) 50% 50%;
+    background-size: cover;
+}
+
+
+
+/* se1 */
+.se1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.se1 > p{
+    text-align: center;
+    margin: 20px;
+}
+.se1 > h2{
+    margin: 80px 0 50px 0;
+}
+
+.se1 iframe{
+    width:100%;
+    height:100%;
+    border: none;
+}
+
+
+
+.se1 .youtube{
+    font-size: 60px;
+    margin: 30px auto;
+    color: red;
+    display: inline-block;
+  }
+  .iy{
+      width: 100%;
+      height: 100%;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 900;
+  }
+  
+  .overlay:target {
+    display: block;
+  }
+  
+  .popup {
+    position: fixed;
+    width: 1000px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    z-index: 1;
+  }
+  
+  .popup:target {
+      display: block;
+  }
+  
+  .popup .close {
+    position: absolute;
+    right: -40px;
+    top: -30px;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .popup .close:hover {
+    color: rgb(152,136,84);
+  }
+
+/* 프로그램 */
+.prg{
+    display: flex;
+    flex-direction: column;
+}
+.pprg{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px auto;
+    color: white;
+}
+.pprg > div{
+    position: relative;
+}
+.pprg > div p{
+    display: none;
+}
+
+.pprg > .long{
+    width: 730px;
+    height: 250px;
+    padding: 40px;
+}
+.pprg > .short{
+    width: 350px;
+    height: 250px;
+    padding: 30px;
+}
+.pprg .pbutton{
+    width: 30px;
+    height: 30px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(0, 35, 107);
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    display: none;
+}
+.pprg .pbutton span{
+    display: none;
+}
+
+.pprg > div:hover{
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgb(153, 152, 152);
+    background-blend-mode: multiply;
+    color: white;
+    transform: translate(-10px, -10px);
+}
+.pprg > div:hover .pbutton{
+    display: flex;
+    justify-content: center;
+}
+.pprg > div:hover h3{
+    margin-bottom: 15px;
+}
+.pprg > div:hover p{
+    display: flex;
+    text-align: justify;
+}
+.pbutton:hover{
+    width: 120px;
+    padding: 0 5px;
+    justify-content: space-between!important;
+    border-radius: 15px;
+    transition: width 0.5s;
+}
+.pbutton:hover span{
+    display: flex;
+}
+.p01{
+    background: url(../images/lecordonbleu/64478.jpg) 50% 45%, #9A9A9A;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.p02{
+    background: url(../images/lecordonbleu/programc7.jpg) 50% 65%, #9A9A9A;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+.p03{
+    background: url(../images/lecordonbleu/programc6.jpg) 50% 50%, #9A9A9A;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+.p04{
+    background: url(../images/lecordonbleu/programb2.jpg) 50% 75%, #9A9A9A;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+.p05{
+    background: url(../images/lecordonbleu/programw3.jpg) 50% 50%, #9A9A9A;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+.p06{
+    background: url(../images/lecordonbleu/programp4.jpg) 50% 90%, #9A9A9A;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+.p07{
+    background: url(../images/lecordonbleu/programo.jpg) 50% 50%, #9A9A9A;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+
+/* se3 */
+.se3 > h2{
+    margin-bottom: 50px;
+}
+.img {
+    /* display: flex; */
+    /* flex-direction: row; */
+    margin: 50px 0;
+    /* position: relative; */
+}
+.img > div{
+    height: 400px;
+}
+.newstext{
+    width: 100%;
+    height: 150px;
+    background: rgba(24, 32, 48, 0.5);
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+}
+.newstext h3{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    word-break: keep-all;
+}
+.newstext p{
+    color: #88794b;
+}
+.img > div:hover .newstext{
+    height: 100%;
+    padding: 150px 20px 20px 20px;
+}
+.newstext .n2{
+    display: none;
+}
+.img > div:hover .n1{
+    display: none;
+}
+.img > div:hover .n2{
+    display: flex;
+    color: white;
+}
+.img > div:nth-child(1){
+    background: url(../images/lecordonbleu/news-g61091.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+.img > div:nth-child(2){
+    background: url(../images/lecordonbleu/41109.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+.img > div:nth-child(3){
+    background: url(../images/lecordonbleu/international.jpg) 15% 50% no-repeat;
+    background-size: cover;
+}
+.img > div:nth-child(4){
+    background: url(../images/lecordonbleu/news-c.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+.img > div:nth-child(5){
+    background: url(../images/lecordonbleu/60634.jpg) 0 0 no-repeat;
+    background-size: cover;
+}
+.img > div:nth-child(6){
+    background: url(../images/lecordonbleu/news-t62724.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+.se3 .nap, .se3 .naa{
+  color: rgb(24, 32, 48);
+}
+
+/* top */
+.top{
+    width: 80px;
+    height: 50px;
+    background-color: rgb(0, 35, 107);
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    font-size: 20px;
+    color: rgb(154, 169, 193);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 100;
+    transition-duration: 1s;
+}
+/* se4 */
+.se4{
+    height: 800px;
+    background-color: rgb(154, 169, 193, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.se4 h2{
+    margin-bottom: 20px;
+}
+.se4 > .text > p{
+    color: white;
+}
+.map{
+    width: 1000px;
+    height: 600px;
+    background: url(../images/lecordonbleu/50whiteworld-map-4706158.png) 50% 50% no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+.map .dot{
+    width: 8px;
+    height: 8px;
+    /* background-color: white; */
+    border-radius: 50%;
+    animation: dotstyle 3s infinite;
+    animation-direction: alternate;
+}
+@keyframes dotstyle{
+    0% { background: rgb(234,231,220);}
+    50% { background: rgb(213,207,186);}
+    100% { background: rgb(193,183,152);}
+}
+.map .dot div{
+    display: none;   
+}
+.map .dot:hover div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: white;
+    color: rgb(0, 35, 107);
+    width: 250px;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    top: -110px;
+    left: -120px;
+    z-index: 100;
+}
+.map .dot:hover div p:last-child{
+    font-size: 12px;
+    margin-top: 5px;
+}
+.map .d1{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+}
+.map .d2{
+    position: absolute;
+    top: 268px;
+    left: 417px;
+}
+.map .d3{
+    position: absolute;
+    top: 285px;
+    left: 395px;
+}
+.map .d4{
+    position: absolute;
+    top: 305px;
+    left: 395px;
+}
+.map .d5{
+    position: absolute;
+    top: 305px;
+    left: 395px;
+}
+
+.map .d6{
+    position: absolute;
+    top: 340px;
+    left: 345px;
+}
+.map .d7{
+    position: absolute;
+    top: 370px;
+    left: 335px;
+}
+.map .d8{
+    position: absolute;
+    top: 490px;
+    left: 390px;
+}
+.map .d9{
+    position: absolute;
+    top: 500px;
+    left: 455px;
+}
+.map .d10{
+    position: absolute;
+    top: 505px;
+    left: 470px;
+}
+.map .d11{
+    position: absolute;
+    top: 495px;
+    left: 485px;
+}
+.map .d12{
+    position: absolute;
+    top: 480px;
+    left: 490px;
+}
+.map .d13{
+    position: absolute;
+    top: 515px;
+    left: 555px;
+}
+.map .d14{
+    position: absolute;
+    top: 310px;
+    left: 270px;
+}
+.map .d15{
+    position: absolute;
+    top: 290px;
+    left: 155px;
+}
+.map .d16{
+    position: absolute;
+    top: 260px;
+    left: 130px;
+}
+.map .d17{
+    position: absolute;
+    top: 255px;
+    left: 30px;
+}
+.map .d18{
+    position: absolute;
+    top: 215px;
+    left: 50px;
+}
+.map .d19{
+    position: absolute;
+    top: 205px;
+    left: 45px;
+}
+.map .d20{
+    position: absolute;
+    top: 245px;
+    left: 870px;
+}
+.map .d21{
+    position: absolute;
+    top: 255px;
+    left: 875px;
+}
+.map .d22{
+    position: absolute;
+    top: 335px;
+    left: 820px;
+}
+.map .d23{
+    position: absolute;
+    top: 425px;
+    left: 875px;
+}
+.map .d24{
+    position: absolute;
+    top: 450px;
+    left: 960px;
+}
+.map .d25{
+    position: absolute;
+    top: 445px;
+    left: 975px;
+}
+
+
+/* se5 */
+.se5{
+    width: 100%;
+    background-color: rgb(64, 72,87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 50px;
+    position: relative;
+}
+.se5 > .inner{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.se5 > .inner > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.se5 form > *{
+    margin-bottom: 10px;
+}
+.button{
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgb(152,136,84);
+    cursor: pointer;
+}
+.personal{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+}
+.personal > div{
+    width: 33.3%;
+    height: 50px;
+    border: 1px solid rgb(64, 72,87);
+    background-color: rgb(0, 35, 107);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.pb.on{
+    background-color: rgb(154, 169, 193);
+}
+
+textarea{
+    width: 800px;
+    height: 300px;
+    resize: none;
+}
+.notice{
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+.open, .formopen{
+    display: none!important;
+}
+.open.on{
+    display: flex!important;
+}
+.formopen.on{
+    display: block!important;
+}
+
+/* footer */
+footer{
+    height: 300px;
+    padding: 50px 0;
+    background-color: rgb(24, 32, 48);
+    color: rgb(64,72,87);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* .푸터 */
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer address a{
+    text-decoration: none;
+    color: rgb(64, 72,87);
+}
+.footer > div:first-child{
+    display: flex;
+    flex-direction: column;
+}
+.footer > .ffoo{
+    display: flex;
+    flex-direction: row;
+}
+.footer .fo > div > i{
+    display: none;
+}
+.footer .fo > span{
+    margin-right: 10px;
+    position: relative;
+    color:rgb(64,72,87);
+    cursor: pointer;
+}
+.footer .fo > span::before{
+    content: "";
+    width: 1px;
+    height: 13px;
+    background-color: rgb(64,72,87);
+    position: absolute;
+    top: 5px;
+    left: -7px;
+}
+.footer .fo > span:nth-of-type(1)::before{
+    display: none;
+}
+
+.ffoo > li div{
+    background-color: rgb(64,72,87);
+    color: white;
+    width: 160px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 5px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.ffoo .sub{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    background-color: rgb(154, 169, 193);
+    margin: 0 5px;
+    position: absolute;
+    display: none;
+}
+.ffoo .sub > li{
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(154, 169, 193);
+    padding-left: 5px;
+}
+.ffoo .sub.on{
+    display: flex;
+}
+
+/* sns */
+footer .snsicon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 270px;
+}
+footer .snsicon > span{
+    border-radius: 50%;
+    background-color: rgb(64,72,87);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(24,32,48);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+

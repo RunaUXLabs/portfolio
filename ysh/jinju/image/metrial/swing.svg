@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="211.218" height="259.051" viewBox="0 0 211.218 259.051">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .cls-1, .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1 {
+        opacity: 0.5;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="그룹_51" data-name="그룹 51" transform="translate(-874.943 -360.25)">
+    <g id="up_deung_line" transform="translate(874.518 358.29)">
+      <path id="패스_33" data-name="패스 33" class="cls-1" d="M34.35,49.919v80.5l60.744-22.495V26.08Z" transform="translate(114.548 86.457)"/>
+      <line id="선_21" data-name="선 21" class="cls-2" y2="67.208" transform="translate(106.033 12.733)"/>
+      <ellipse id="타원_14" data-name="타원 14" class="cls-3" cx="19.301" cy="10.773" rx="19.301" ry="10.773" transform="translate(87.375 1.96)"/>
+      <path id="패스_34" data-name="패스 34" class="cls-4" d="M148.919,12.84H63.1L2.4,73.538v85.821l60.7,60.652h85.821l60.7-60.652V73.538Z" transform="translate(0.025 38.999)"/>
+      <path id="패스_35" data-name="패스 35" class="cls-4" d="M15.92,17.517,22.7,25.494H92.068l8.344-8.344" transform="translate(48.486 54.448)"/>
+      <path id="패스_36" data-name="패스 36" class="cls-2" d="M17.75,18.97" transform="translate(55.046 60.972)"/>
+      <path id="패스_37" data-name="패스 37" class="cls-2" d="M2.4,26.08,63.832,49.919h85.042L207.646,26.08" transform="translate(0.025 86.457)"/>
+      <path id="패스_38" data-name="패스 38" class="cls-2" d="M1.482,46.329,63.856,67.371H148.9l60.314-21.042" transform="translate(0 149.508)"/>
+      <path id="패스_39" data-name="패스 39" class="cls-4" d="M34.35,49.919v80.5l60.744-22.495V26.08Z" transform="translate(114.548 86.457)"/>
+    </g>
+  </g>
+</svg>

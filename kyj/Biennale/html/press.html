@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press/sub</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+    <link rel="stylesheet" type="text/css" href="../css/press.css">
+    <link rel="stylesheet" type="text/css" media="all and (max-width:640px)" href="../css/Mpress.css">
+  
+</head>
+
+<body>
+    <header>
+        <div class="top inner">
+            <img src="../imgs/projectA/Biennale/logo.PNG" alt="logo">
+
+            <div class="login">
+               <a href="">로그인</a>
+               <a href="">회원가입</a> 
+            </div>
+            <div class="memubar">
+                <span></span>
+                <span></span>
+                <span></span>
+           
+            </div>
+            <div class="sub">
+                    <a href="">로그인</a>
+                    <a href="">회원가입</a>
+                <div>
+                    <span class="on" data-id="snb01">청주공예비엔날레</span>
+                    <ul class="submini" id="snb01">
+                        <li>2021청주공예비엔날레</li>
+                        <li>청주공예비엔날레소개</li>
+                        <li>2019청주공예비엔날레</li>
+                    </ul>
+                </div>
+                <div>
+                    <span data-id="snb02">전통공예비엔날레</span>
+                    <ul class="submini" id="snb02">
+                        <li>2020전통공예페스티발</li>
+                        <li>역대 청주 공예페어</li>
+                    </ul>
+                </div>
+                <div>
+                    <span data-id="snb03">열린마당</span>
+                    <ul class="submini" id="snb03">
+                        <li>공지사항</li>
+                        <li>경영공시</li>
+                        <li>보도자료</li>
+                        <li>행사일정</li>
+                    </ul>
+                </div>
+                <div>
+                    <span data-id="snb04">조직위원회소개</span>
+                    <ul class="submini" id="snb04">
+                        <li>인사말</li>
+                        <li>연혁</li>
+                        <li>조직도</li>
+                        <li>공식파트너쉽</li>
+                        <li>국제자문관</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg">
+           <h2><em>Press Guide</em></h2> 
+        </div>
+    </header>
+    <div class="section inner">
+
+        <div class="online">
+            <h1>온라인 프레스 서비스</h1>
+            
+            <p>- 청주공예비엔날레에서는 <br>
+                전시 기간 동안 언론인 여러분들의 원활한 취재를 위해 온라인 프레스 <br>
+                서비스를 제공합니다.
+            </p>
+            <p>- <b>주소</b> : http://www.okcjpress.org<br>
+                - <b>이용대상</b> : 언론 및 미디어 관련 종사자<br>
+                - <b>ID/PW</b> : 온라인 프레스 등록 완료 후 개별 이메일로 전달
+            </p>
+        </div>
+        <div class="online2">
+            <h1>프레스 센터</h1>
+            
+            <p>- 청주공예비엔날레 프레스센터는 개막일부터 폐막일까지 운영됩니다.<br>
+                프레스센터에는 기사 송고용 컴퓨터와 무선 인터넷(WIFI), <br>
+                프린터가 준비되어 있습니다.</p>
+            <p>- <b>운영기간</b> : 2021. 09. 08. ~ 10. 17.<br>
+                - <b>위치</b> : 청주공예비엔날레 행사장 3층</p>
+        </div>
+
+    </div>
+<div class="aside">
+    <div class="text inner">
+    <h1>프레스관련문의</h1>
+     <table>
+         <tr>
+             <th>구분</th>
+             <th>이름</th>
+             <th>연락처</th>
+         </tr>
+          <tr>
+              <th>보도팀</th>
+              <td>박혜령팀장</td>
+              <td>T. 043-219-1085 / E. artepark@naver.com</td>
+          </tr>
+          <tr>
+              <th>홍보마케팅<br>방송,라디오,온라인</th>
+               <td>김상은팀장</td>
+               <td>T. 070-7777-7639 / E. skim04@cjculture.org</td>
+          </tr>
+     </table>
+    </div>
+</div>
+    
+        <div class="text2">
+         <div class="redius">프레스출입증<br>신청하기</div>
+        </div> 
+    
+
+<footer>
+    <div class="bottom inner">
+        <div class="address">
+            <p>
+                [28501] 충북 청주시 청원구 상당로 314 (내덕2동 201-1) 청주공예비엔날레 조직위원회<br>
+                TEL : 070-7777-7636FAX : 043-268-0256<br>
+               Copyright© 2019 Cheongju Craft Biennale. All Rights Reserved.
+            </p>
+        </div>
+    
+
+    <div class="emoticon">
+                <i class="fab fa-facebook"></i>  
+                <i class="fab fa-youtube-square"></i>
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-linkedin"></i>
+    </div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+$(".memubar").click(function(){
+  $(".sub").toggleClass("on");
+});
+});
+var burger = $('.memubar');
+
+burger.each(function(index){
+ var $this = $(this);
+
+$this.on('click', function(e){
+e.preventDefault();
+$(this).toggleClass('active-' + (index+1));
+})
+});
+$(".sub > div").click(function(){ 
+  $(this).addClass('on').siblings().removeClass('on');
+  $("#"+$(this).data('id')).addClass('on').siblings().removeClass('on');
+
+  $(this).addClass("on");
+  $(".sub > div").not(this).removeClass("on");
+  $(this).children("ul").slideToggle(300);
+  $(".sub > div").not(this).children("ul").slideUp(300);
+  $(".submini").click(function(e){ 
+  e.stopPropagation();
+  });
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,788 @@
+@charset "UTF-8";
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+/* Material Icons baseline*/
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+/* Material Icons Outlined*/
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Round');
+/* Material Icons Round*/
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Sharp');
+/* Material Icons Sharp*/
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone');
+/* Material Icons Sharp*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Noto Sans KR', sans-serif;}
+body{min-width: 1440px;}
+.inner{ width: 1440px; margin: 0 auto;}
+.clearfix{content: "";clear: both;display: table;}
+
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bgA.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/* 제이쿼리 나브 */
+/*header > nav {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #eee;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+header > nav > div {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px 0px;
+    position: relative;
+}
+
+header > nav > div > a.logo {
+    text-indent: -90000px;
+    overflow:hidden;
+    width: 150px;
+    height: 62px;
+    background: url(../img/alogo.png) no-repeat;
+    margin-top: 10px;
+}
+
+header > nav > div > div{
+    width: 1100px;
+    height: 85px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header > nav > div > div > ul{
+    width: 380px;
+    height: 85px;
+    line-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+header > nav > div > div > ul > li{
+    position: relative;
+}
+header > nav > div  > div > ul > li::after{
+    width: 0%;
+    height: 3px;
+    background-color: rgb(242, 101, 34);
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top:54px;
+    left: 1px;
+}
+header > nav > div  > div > ul > li:hover::after{
+    width: 100%;
+    transition:  width 0.3s;
+}
+header > nav > div  > div > ul > li > a{
+    color: rgb(150,149,149);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+header > nav > div  > div > ul > li > a:hover{
+    color:  rgb(242, 101, 34);
+}
+header > nav > div > div > div >input.navsearchbox{
+    width: 0px;
+    height: 51px;
+    border-radius: 10px;
+    margin: 14px 0 0 20px;
+    position: relative;
+    right: 0;
+    border: none;
+}
+header > nav > div > div > div {
+    position: relative;
+}
+header > nav > div > div > div::after{
+    width: 50px;
+    height: 85px;
+    line-height: 85px;
+    content: '\f002';
+    font-size: 19px;
+    color: rgb(150,149,149);
+}
+header > nav > div > div > div::before{
+    display: none;
+}
+header > nav > div > div > div:hover > input.navsearchbox{
+    width: 400px;
+    transition: width 0.5s;
+    background: white;
+    border: 1px solid rgb(150,149,149);
+}*/
+
+/* 나브 */
+nav {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+nav > div {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px 0px;
+    position: relative;
+}
+nav > div > a.logo {
+    text-indent: -90000px;
+    overflow:hidden;
+    width: 150px;
+    height: 62px;
+    background: url(../img/logo.png) no-repeat;
+    margin-top: 10px;
+}
+nav > div > div{
+    width: 1100px;
+    height: 85px;
+    display: flex;
+    justify-content: flex-end;
+}
+nav > div > div > ul{
+    width: 380px;
+    height: 85px;
+    line-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+nav > div > div > ul > li{
+    position: relative;
+}
+nav > div  > div > ul > li::after{
+    width: 0%;
+    height: 3px;
+    background-color: rgb(242, 101, 34);
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top:54px;
+    left: 1px;
+}
+nav > div  > div > ul > li:hover::after{
+    width: 100%;
+    transition:  width 0.3s;
+}
+nav > div  > div > ul > li > a{
+    color: #eee;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+nav > div  > div > ul > li > a:hover{
+    color:  rgb(242, 101, 34);
+}
+nav > div.inner > div > ul > li > ul.subnav{
+    position: fixed;
+    top: 101px;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 0px;
+    line-height: 0px;
+    overflow: hidden;
+    padding-left: 240px;
+}
+nav > div  > div > ul > li > ul.subnav > li{
+    height: 70px;
+    line-height: 70px;
+    margin-left: 110px;
+    list-style: none;
+}
+nav > div  > div > ul > li:hover > ul.subnav{
+    height: 70px;
+    line-height: 70px;
+    transition: height 0.5s;
+    background: white;
+}
+nav > div  > div > ul > li > ul.subnav > li > a{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(150,149,149);
+    text-decoration: none;
+}
+nav > div  > div > ul > li > ul.subnav > li > a:hover{
+    color: rgb(242, 101, 34)
+}
+nav > div > div > div >input.navsearchbox{
+    width: 0px;
+    height: 51px;
+    background: #eee;
+    border-radius: 10px;
+    margin: 14px 0 0 20px;
+    position: relative;
+    right: 0;
+    border: none;
+}
+nav > div > div > div {
+    position: relative;
+}
+nav > div > div > div::after{
+    width: 50px;
+    height: 85px;
+    line-height: 85px;
+    content: '\f002';
+    font-size: 19px;
+    color: #eee;
+}
+nav > div > div:hover > div::after{
+    transform: scale(1.3,1.3);
+    transition: 1s;
+}
+nav > div > div > div::before{
+    display: none;
+}
+nav > div > div > div:hover > input.navsearchbox{
+    width: 400px;
+    transition: width 0.5s;
+    background: #eee;
+}
+/* 나브 */
+
+/* main */
+main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+main div.mainimg{
+    height: 100%;
+    position: absolute;
+    width: 100vw;
+    padding-left:260px;
+    padding-top: 250px;
+    background-size: cover;
+    background-position: center center;
+}
+main > div.mainimg > div{
+    width: 650px;
+    height: 450px;
+    position: relative;
+}
+main > div.mainimg > div > span{
+    width: 100%;
+    height: 260px;
+    font-weight: bold;
+    font-size: 90px;
+    color: white;
+    opacity: 0;
+}
+main > div.mainimg > div > p{
+    font-size: 14px;
+    font-weight: 400;
+    height: 65px;
+    line-height: 65px;
+    border-bottom: 2px solid rgb(182, 178, 178);
+    color: white;
+    opacity: 0;
+}
+main > div.mainimg.main1{background: url(../img/maina.png);background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);}
+main > div.mainimg.main2{background: url(../img/mainb.png);background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.6);}
+main > div.mainimg.main3{background: url(../img/mainc.png);background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.6);background-position: 0 -860px;}
+main > div.mainimg.main4{background: url(../img/maind.png);background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.6);}
+main > div.mainimg.main5{background: url(../img/maine.png);background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.6);}
+main > div.mainimg.main6{background: url(../img/mainf.png);background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.6);}
+
+/* sectionA */
+section.artcalendar{
+    width: 100%;
+    height: 1500px;
+}
+
+section.artcalendar > div.inner{
+    height: 800px;
+    padding-left: 60px;
+    position: relative;
+}
+section.artcalendar > div.inner > div.artcopy {
+    height: 685px;
+    padding:215px 0 67px 0;
+    height: 100%;
+    margin-bottom: 250px;
+}
+section.artcalendar > div.inner > div.artcopy > p{
+    height: 77px;
+    line-height: 77px;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(46, 0, 4);
+}
+section.artcalendar > div.inner > div.artcopy > p:nth-child(2){
+    height: 88px;
+    line-height: 88px;
+    margin: 215px 0 16px 0;
+}
+section.artcalendar > div.inner > div.artcopy > div{
+    width: 313px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+section.artcalendar > div.inner > div.artcopy > div > button{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    background: rgb(154, 10, 26);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+section.artcalendar > div.inner > div.swiper-container2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+section.artcalendar > div.inner > div.swiper-container2 > div.swiper-wrapper2{
+    height: 100%;
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 110px 0 60px;
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.day{
+    width: 500px;
+    padding: 150px 0 310px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.day > div{
+    width: 257px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(154, 10, 26);
+    margin-bottom: 92px;
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.day > p{
+    width: 100%;
+    margin-left: 6px;
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.day > p > a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(46, 0, 4,0.5);
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.day > p > a:hover{
+    color: rgba(46, 0, 4,1);
+    transition: 0.4s;
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic {
+    width: 770px;
+    height: 100%;
+    padding: 135px 135px 135px 135px;
+    position: relative;
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter{
+    width: 100%;
+    height: 100%;
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.posterchild{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    padding: 100px;
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.posterchild > p{
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(254, 204, 126);
+    margin:30px 0 90px 0
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.posterchild > a{
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0,0,0);
+    z-index: 10;
+    top: 650px;
+}
+:root {
+    --swiper-theme-color: rgb(46, 0, 4);
+}
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 675px;
+    width: calc(var(--swiper-navigation-size)/ 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: unset;
+    align-items: unset;
+    justify-content: unset;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color));
+}
+.swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none!important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+    font-size: 20px;
+    position: absolute;
+    left: 290px;
+    font-weight: bold;
+}
+.swiper-button-next:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none!important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+    font-size: 20px;
+    position: absolute;
+    right: 290px;
+    font-weight: bold;
+}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.sim{background-image: url(../img/sim.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.view{background-image: url(../img/view.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.soso{background-image: url(../img/soso.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.okta{background-image: url(../img/okta.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.kimhea{background-image: url(../img/kimhea.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.p12{background-image: url(../img/12p.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.p18{background-image: url(../img/18p.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.dream{background-image: url(../img/dream.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.draw{background-image: url(../img/draw.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.shinhea{background-image: url(../img/shinhea.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.sec4{background-image: url(../img/4sec.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.dream{background-image: url(../img/dream.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.studio{background-image: url(../img/studio.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.poem{background-image: url(../img/poem.png);}
+section.artcalendar > div.inner > div.swiper-container2 div.swiper-slide2 > div.minic > div.artposter > div.kimsung{background-image: url(../img/kimsung.png);}
+section.artcalendar > div.news{
+    width: 1619px;
+    height: 600px;
+    float: right;
+    background: white;
+}
+section.artcalendar > div.news > p{
+    height: 70px;
+    line-height: 70px;
+    font-size: 40px;
+    font-weight: 500;
+    color: rgb(46, 0, 4);
+    margin: 0 0 24px 9px;
+}
+section.artcalendar > div.news > div{
+    width: 1619px;
+    height: 325px;
+}
+section.artcalendar > div.news > div.testbutton{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding-left: 9px;
+}
+section.artcalendar > div.news > div.testbutton > button{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    background: rgba(46, 0, 4,0.5);
+    border-radius: 25px;
+    border: unset;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+section.artcalendar > div.news > div.testbutton > button:hover{
+    background: rgba(46, 0, 4,1)
+}
+section.artcalendar > div.news > div > div.container{
+    width: 100%;
+    height: 325px;
+    margin-top: 25px;
+}
+section.artcalendar > div.news > div >  div.container > div.wrapper{
+    width: 100%;
+    height: 325px;
+    display: flex;
+    overflow: hidden;
+}
+section.artcalendar > div.news > div >  div.container > div.wrapper > div.slide{
+    width: 310px;
+    height: 325px;
+    background: rgb(210, 210, 210);
+    margin-right: 32px;
+    padding: 68px 0 0 11px;
+}
+section.artcalendar > div.news > div >  div.container > div.wrapper > div.slide > p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 52px;
+}
+section.artcalendar > div.news > div >  div.container > div.wrapper > div.slide > p > a{
+    text-decoration: none;
+    color: black;
+}
+section.artcalendar > div.news > div >  div.container > div.wrapper > div.slide:last-child{
+    margin-right: unset;
+}
+section.club{
+    width: 100%;
+    height: 460px;
+    background: url(../img/bgC.png) no-repeat;
+}
+section.club > div.inner{
+    height: 100%;
+    padding: 20px 35px 0;
+}
+section.club > div.inner > p{
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 16px;
+}
+section.club > div.inner > div.circle{
+    height: 100px;
+    padding: 0 90px 0 90px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 54px;
+}
+section.club > div.inner > div.circle > div{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    padding-top: 52px;
+    text-align: center;
+}
+section.club > div.inner > div.circle > div > a{
+    font-size: 16px;
+    font-weight: bolder;
+    height: 30px;
+    line-height: 30px;
+    color: rgb(0, 52, 37);
+    border-top: 1px solid rgb(0, 122, 29);
+    text-decoration: none;
+    position: relative;
+}
+section.club > div.inner > div.circle > div > a::before{
+    position: absolute;
+    font-size: 25px;
+    top: -33px;
+    left: 0px;
+    color: rgb(253, 126, 20);
+}
+section.club > div.inner > div.circle > div:nth-child(1) > a::before{content:'\f518';left: 1px;}
+section.club > div.inner > div.circle > div:nth-child(2) > a::before{content: '\f53f';left: 3px;}
+section.club > div.inner > div.circle > div:nth-child(3) > a::before{content: '\f167';left: 2px;}
+section.club > div.inner > div.circle > div:nth-child(4) > a::before{content: '\f001';left: 3px;}
+section.club > div.inner > div.circle > div:nth-child(5) > a::before{content: '\f630';}
+section.club > div.inner > div.circle > div:nth-child(6) > a::before{content: '\f1ae';left: 5px;}
+section.club > div.inner > div.circle > div:nth-child(7) > a::before{content:'';
+width: 30px;height: 30px;background-image: url(../img/koreaculture.png);background-size: contain;left: 15px;top: -36px;}
+section.club > div.inner > div.circle > div:nth-child(8) > a::before{content: '\f3ff';
+left: 18px;}
+
+
+section.club > div.inner > div.container.artclub{
+    width: 100%;
+    height: 166px;
+}
+section.club > div.inner > div.container > div.wrapper{
+    height: 166px;
+    padding: 0 35px 0;
+    display: flex;
+    justify-content: space-between;
+}
+section.club > div.inner > div.container > div.wrapper > div.slide{
+    width: 251px;
+    height: 166px;
+    border-radius: 30px;
+    background: white;
+}
+section.club > div.inner > div.container > div.wrapper > div.slide > a.logo{
+    text-indent: -90000px;
+    overflow:hidden;
+    width: 251px;
+    height: 166px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+section.Agency{
+    width: 100%;
+    height: 960px;
+    padding: 140px 0 164px 0;
+}
+section.Agency > div.inner{
+    height: 604px;
+}
+section.Agency > div.inner > p{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+}
+section.Agency > div.inner > div{
+    height: 52px;
+    line-height: 52px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+section.Agency > div.inner > div.artAgency{
+    width: 1200px;
+    height: 500px;
+    margin-left: 120px;
+    background: url(../img/bgD.png);
+}
+section.Agency > div.inner > div.artAgency > div:first-child{
+    width: 1200px;
+    height: 400px;
+}
+section.Agency > div.inner > div.artAgency > div:first-child > div{
+    display: flex;
+    justify-content: space-between;
+}
+section.Agency > div.inner > div.artAgency > div:first-child > div > p{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 200px;
+    margin: 110px 16px 89px;
+}
+section.Agency > div.inner > div.artAgency > div:first-child > div > p > a{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+section.Agency > div.inner > div.artAgency > div:last-child{
+    display: flex;
+    justify-content: space-between;
+}
+section.Agency > div.inner > div.artAgency > div:last-child > button{
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    border: 1px solid white;
+    background: rgba(101, 100, 100,0.6);
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    background: rgb(200,200,200);
+}
+footer > div.inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 0 20px;
+    height: 150px;
+}
+footer > div.inner > div{
+    width: 50%;
+    height: 100%;
+}
+footer > div.inner > div:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+footer > div.inner > div > div{
+    width: 320px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+footer > div.inner > div > div > a{
+    font-size: 14px;
+    color: rgb(100,100,100);
+    position: relative;
+    text-decoration: none;
+}
+footer > div.inner > div > div > a::after{
+    width: 1px;
+    height: 14px;
+    content: '';
+    background-color: rgb(100,100,100);
+    position: absolute;
+    top: 5px;
+    right: -10px;
+}
+footer > div.inner > div > div > a:nth-child(4)::after{
+    display: none;
+}
+
+footer > div.inner > div > p{
+    font-size: 14px;
+    color: rgb(100,100,100);
+}
+footer > div.inner > div:last-child{
+    width: 206px;
+    height: 150px;
+    line-height: 31px;
+}
+footer > div.inner > div:last-child > select{
+    width: 206px;
+    height: 31px;
+    border: 1px solid rgb(100,100,100);
+    background:rgb(250,250,250);
+    color: rgb(100,100,100);
+}
+footer > div.inner > div:last-child > select > option{
+    color: rgb(100,100,100);
+}

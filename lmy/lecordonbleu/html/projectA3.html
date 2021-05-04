@@ -1,0 +1,800 @@
+<!doctype html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+
+    <title>Le Cordon Bleu</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/projectA3_jQ.css">
+    <link rel="stylesheet" type="text/css" media="all and (max-width:640px)" href="../css/mproject3.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $(".se1 > .youtube").click(function () {
+                $(".se1 > iframe").toggleClass("on");
+            });
+
+            $(".se5 .online").click(function () {
+                $(".se5 .open, .se5 .formopen").toggleClass("on");
+                $(".personal").find(".pb").removeClass("on");
+            });
+
+            $(".se5 .pb").click(function () {
+                $(this).toggleClass("on");
+                $(".se5 .pb").not(this).removeClass("on");
+                return false;
+            });
+
+            $(".mMenu").click(function () {
+                $("header, nav, .logo, .msearch, .mX, .mMenu, .langbutton, .form").addClass("on");
+                $(".top").hide();
+            });
+            $(".mX").click(function () {
+                $("header, nav, .logo, .msearch, .mX, .mMenu, .langbutton, .form").removeClass("on");
+                $(".top").show();
+            });
+
+
+
+            $(".ffoo > li > div").click(function () {
+                $(this).next().toggleClass("on");
+                $(".ffoo > li > div").not(this).next().removeClass("on");
+                $(".fo").find("span").removeClass("on");
+                return false;
+            });
+
+            $(".fo > div").click(function () {
+                $(this).siblings().toggleClass("on");
+                $(".ffoo").find(".sub").removeClass("on");
+                return false;
+            });
+
+            $(".menu > li > a").click(function () {
+                $(this).next().toggleClass("on");
+                $(".menu > li > a").not(this).next().removeClass("on");
+                return false;
+            });
+
+            // $(".pprg > div").click(function () {
+            //     $(this).children(".firstp").toggleClass("on");
+            //     $(".pprg > div").not(this).children(".firstp").removeClass("on");
+            // });
+
+            $(".pprg > div").hover(function () {
+                $(this).toggleClass("on");
+                $(".pprg > div").not(this).removeClass("on");
+            });
+
+
+            $(window).resize(function() {
+                 if($(window).width() < 641) {
+                    $(".pprg > div").click(function () {
+                $(this).children(".firstp").toggleClass("on");
+                $(".pprg > div").not(this).children(".firstp").removeClass("on");
+                    });
+                    } 
+            });
+
+
+            $(".top").hide();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > $("header").height()) {
+                    $(".top").fadeIn("swing");
+                } else {
+                    $(".top").fadeOut("swing");
+                }
+            });
+
+
+         
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <div id="draggable" class="ui-widget-content cpopup">
+        <h2>코로나19 관련 공지사항</h2>
+        <p>
+            1. 최근 2주 기간 내 해외 방문, COVID-19 확진자 접촉, 집단감염이 발생한 장소를 방문하셨거나 감기와 유사한 증상이 있으신 경우 아카데미로 연락 바랍니다.
+        </p>
+        <p>2. 시연 시 제품 시식은 불가하나 개별적으로 용기를 갖고 오셔서 담아 가시는 것은 허용됩니다. 실습실에서 시식 또한 불가합니다.
+        </p>
+        <p>3. 아카데미 내부에서 식사는 살롱 및 6층 엘리베이터 앞 칸막이가 되어 있는 자리에서만 가능합니다. (지하 1층을 비롯하여 다른 층에서는 불가합니다.) 점심시간에는 숙명여대 외부에 있는 식당을 이용 부탁드립니다. 외부에 나가실 때는 반드시 유니폼 및 조리화는 라커에 두시고 환복하신 후에 외출하시기 바랍니다.
+        </p>
+        <p>4. 이외 마스크 착용 및 손 씻기 등 COVID-19를 예방하기 위해 필요한 안전 수칙을 기본으로 실천해주시고 지켜주시기를 부탁드립니다.
+        </p>
+        <form>
+            <input type="checkbox" id="pop_day"/>
+            <label for="pop_day">1일동안닫기</label>
+            <a href="#" class="btn_close">1일동안닫기</a>
+        </form>
+
+        <div id="coronaClose">close</div>
+    </div>
+
+
+    <header>
+
+        <div id="header" class="inner header">
+            <a href="#" class="logo"></a>
+            <span class="mX"><i class="fas fa-times"></i></span>
+
+            <div class="search">
+                <div class="span">
+                    <a href="#">캠퍼스</a>
+                    <a href="#">선택 과정 보기</a>
+                    <a href="#">로그인</a>
+                </div>
+
+                <div class="form">
+                    <form>
+                        <input type="search">
+                    </form>
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <div class="langbutton">
+                    <a href="#">KO</a>
+                    <a href="#">EN</a>
+                </div>
+            </div>
+        </div>
+
+        <span class="mMenu"><i class="fas fa-bars"></i></span>
+    </header>
+
+    <nav>
+        <ul class="inner menu">
+            <li>
+                <a href="#">서울</a>
+                <ul class="sub_menu">
+                    <li>서울 캠퍼스</li>
+                    <li>셰프 소개</li>
+                    <li>캠퍼스 시설</li>
+                    <li>연락처 및 찾아오시는 길</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">르 꼬르동 블루</a>
+                <ul class="sub_menu">
+                    <li>국제 캠퍼스 소개</li>
+                    <li>역사</li>
+                    <li>회장 인사</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">프로그램</a>
+                <ul class="sub_menu">
+                    <li>그랑 디플로마</li>
+                    <li>요리 디플로마</li>
+                    <li>제과 디플로마</li>
+                    <li>제빵 디플로마</li>
+                    <li>와인 & 음료 프로그램</li>
+                    <li>단기 프로그램</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">입학 안내</a>
+                <ul class="sub_menu">
+                    <li>입학 안내</li>
+                    <li>국제학생 입학안내</li>
+                    <li>정규과정 일정</li>
+                    <li>등록금</li>
+                    <li>장학금</li>
+                    <li>FAQ</li>
+                    <li>해외캠퍼스 입학상담</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">방문 예약</a>
+                <ul class="sub_menu">
+                    <li>개별 입학상담</li>
+                    <li>입학설명회</li>
+                    <li>요리&제과 참관수업</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">동문 네트워크 & 취업 정보</a>
+                <ul class="sub_menu">
+                    <li>동문 커뮤니티</li>
+                    <li>동문 소개 및 인터뷰</li>
+                    <li>동문 구인 및 구직</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">뉴스 & 이벤트</a>
+            </li>
+
+        </ul>
+
+        <div class="msearch">
+            <span class="mspan"><i class="fas fa-globe-americas"></i></span>
+            <span class="mspan"><i class="fas fa-shopping-cart"></i></span>
+            <span class="mspan"><i class="fas fa-user"></i></span>
+        </div>
+
+    </nav>
+
+    <div class="quickmenu">
+        <div><span>Quik</span><span>Menu</span></div>
+        <a href="#">입학 지원</a>
+        <a href="#">안내 책자</a>
+        <a href="#">연락처</a>
+        <a href="#">소식 받기</a>
+    </div>
+
+    <div class="swiper-container inner visual">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide vsw0">
+                <h1>LE CORDON BLEU</h1>
+                <p>르 꼬르동 블루는 요리 예술과 호스피탈리티 분야에서<br>최고의 프로그램을 제공하는 세계적 명성의 교육기관 입니다.</p>
+            </div>
+            <div class="swiper-slide vsw1">
+                <h1>LE CORDON BLEU</h1>
+                <p>르 꼬르동 블루는 요리 예술과 호스피탈리티 분야에서<br>최고의 프로그램을 제공하는 세계적 명성의 교육기관 입니다.</p>
+            </div>
+            <div class="swiper-slide vsw2">
+                <h1>LE CORDON BLEU</h1>
+                <p>르 꼬르동 블루는 요리 예술과 호스피탈리티 분야에서<br>최고의 프로그램을 제공하는 세계적 명성의 교육기관 입니다.</p>
+            </div>
+            <div class="swiper-slide vsw3">
+                <h1>LE CORDON BLEU</h1>
+                <p>르 꼬르동 블루는 요리 예술과 호스피탈리티 분야에서<br>최고의 프로그램을 제공하는 세계적 명성의 교육기관 입니다.</p>
+            </div>
+            <div class="swiper-slide vsw4">
+                <h1>LE CORDON BLEU</h1>
+                <p>르 꼬르동 블루는 요리 예술과 호스피탈리티 분야에서<br>최고의 프로그램을 제공하는 세계적 명성의 교육기관 입니다.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="inner se1">
+        <h2>LE CORDON BLEU In Seoul</h2>
+        <p>2002년, 세계 최고의 요리 학교 ‘르 꼬르동 블루’는 ‘숙명’을 알아보았습니다.</p>
+        <p>아시아의 두 번째 공식 캠퍼스인 르 꼬르동 블루-숙명 아카데미는<br>대한민국에서 르 꼬르동 블루의 교육을 받을 수 있는 유일한 기관입니다.</p>
+
+
+
+
+        <a href="#pop" class="youtube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        
+        
+        <div id="pop" class="overlay">
+            <div class="popup">
+                <a href="#none" class="close">&times;</a>
+        
+                <div class="iy">
+                <iframe id="youtubeplayer" src="https://www.youtube.com/embed/Ul_lC1D_Ljw?controls=0&mute=1" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+        
+        </div>
+
+
+    </section>
+
+    <section class="inner prg">
+        <h2>PROGRAM</h2>
+        <div>
+            <div class="pprg">
+                <div class="long p01">
+                    <h3>그랑 디플로마</h3>
+                    <p class="firstp">그랑 디플로마는 요리 디플로마와 제과 디플로마로 구성되며 끊임없이 변화하는 외식 업계에서 성공을 보장하는 패스포트로 인정받고 있습니다.</p>
+                    <p>그랑 디플로마는 요리 디플로마의 초급, 중급, 상급 과정과 제과 디플로마의 초급, 중급, 상급 과정을 모두 이수하는 것을 의미하며 각 단계별 수료증도 수여 받게 됩니다.
+                    </p>
+                    <a href="#" class="pbutton"><span>자세히 보기</span><i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="short p02">
+                    <h3>요리 디플로마</h3>
+                    <p class="firstp">기초 단계부터 심화 단계까지 다양한 스타일과 테크닉을 배울 수 있습니다. 전통 프랑스식 요리 기법부터 세계적인 최신 트렌드를 다룹니다.</p>
+                    <a href="#" class="pbutton"><span>자세히 보기</span><i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="short p03">
+                    <h3>제과 디플로마</h3>
+                    <p class="firstp">프랑스 제과, 그 예술적인 세계로 초대합니다. 이 과정은 기초 단계부터 상급 단계까지 플레이팅, 브티크 스타일의 디저트 만들기, 정교한 데코레이팅
+                        테크닉을 배웁니다.
+                    </p>
+                    <a href="#" class="pbutton"><span>자세히 보기</span><i class="fas fa-angle-right"></i></a>
+
+                </div>
+            </div>
+            <div class="pprg">
+                <div class="short p04">
+                    <h3>제빵 디플로마</h3>
+                    <p class="firstp">정통 프랑스식 제빵 테크닉과 빵을 만드는 과정을 소개합니다. 데니쉬 페이스트리와 프랑스 각 지역 특성에 따른 장인의 제빵 더불어 고급 효모를 직접
+                        만드는 노하우를 배울
+                        수 있습니다.</p>
+                    <a href="#" class="pbutton"><span>자세히 보기</span><i class="fas fa-angle-right"></i></a>
+
+                </div>
+                <div class="short p05">
+                    <h3>와인 & 음료 프로그램</h3>
+                    <p class="firstp">기후, 토양, 양조기법 및 포도 품종에 따른 와인의 특성 등 와인에 관해 전문적으로 배울 수 있는 커리큘럼을 제공합니다.
+                    </p>
+                    <a href="#" class="pbutton"><span>자세히 보기</span><i class="fas fa-angle-right"></i></a>
+
+                </div>
+                <div class="short p06">
+                    <h3>단기 프로그램</h3>
+                    <p class="firstp">초보자, 미식 연구가 혹은 최적의 하우스 파티를 성공적으로 열고 싶은 사람들을 위해 시간과 비용을 절감한 광범위의 코스가 개설되어 있습니다.</p>
+                    <a href="#" class="pbutton"><span>자세히 보기</span><i class="fas fa-angle-right"></i></a>
+
+                </div>
+
+                <div class="short p07">
+                    <h3>온라인 프로그램</h3>
+                    <p class="firstp">캠퍼스에서 진행하는 프로그램과 동일하게 엄격한 커리큘럼을 제공함으로써 실시간으로 공부하며 일과 삶 그리고 학습 사이의 균형을 잘 맞출 수 있도록
+                        도와줍니다.
+                    </p>
+                    <a href="#" class="pbutton"><span>자세히 보기</span><i class="fas fa-angle-right"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="inner se3">
+        <h2>NEWS & EVENTS</h2>
+        <div class="swiper-container inews">
+            <div class="swiper-wrapper img">
+                <div class="swiper-slide">
+                    <div class="newstext">
+                        <h3>전 세계 한국 동문이 교류하는 한국 총동문회 개최</h3>
+                        <p class="n1">자세히 보기</p>
+                        <p class="n2">전 세계 르 꼬르동 블루에서 수학한 150여명의 동문들이 함께 모여 활발하게 교류하는 자리를 마련하였다. 이날 행사에서는 줄리앙 드뤼프 주한 프랑스
+                            대사관 수석참사관의 축사로 총동문회가 시작되었다.</p>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newstext">
+
+                        <h3>프랑스 혁명기념일 레시피 : 메를로 체리와 아몬드 크림 따르뜨</h3>
+                        <p class="n1">자세히 보기</p>
+                        <p class="n2">르 꼬르동 블루 마스터 셰프들이 알려 드리는 본 레시피는 싱싱한 체리를 메를로 와인에 살짝 포칭해 아몬드 크림 위에 가지런히 올려 만드는 아름다운
+                            체리 따르뜨입니다.</p>
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="newstext">
+                        <h3>국제 요리 경연 대회 :
+                            온라인 지역 예선</h3>
+                        <p class="n1">자세히 보기</p>
+                        <p class="n2">르꼬르동 블루에서는 요리 대회 지역 예선을 모두가 참여할 수 있는 온라인 방식으로 진행하기로 결정했습니다.</p>
+
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="newstext">
+
+                        <h3>프렌치 셰프들의 스승 세바스티앙 드 마사르 총주방장 선임</h3>
+                        <p class="n1">자세히 보기</p>
+                        <p class="n2">오는 10월부터 정규 요리과정 커리큘럼을 개편한다고 밝혔다. 지난 2002년 르 꼬르동 블루 서울 캠퍼스 개교 이래 18년 만에 최대 규모의
+                            변화이다.</p>
+
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="newstext">
+
+                        <h3>르 꼬르동 블루-숙명 아카데미, 글로벌 무대에서 활약할 미래의 셰프 양성</h3>
+                        <p class="n1">자세히 보기</p>
+                        <p class="n2">124년의 전통과 명성을 자랑하는 프랑스 요리학교, 르 꼬르동 블루-숙명 아카데미는 프랑스 요리는 물론 글로벌 감각을 함께 키울 수 있는 요리
+                            디플로마 국제 과정을 오는 3월 개설한다.</p>
+
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="newstext">
+
+                        <h3>프랑스 최고의 요리학교에서 경험하는 태국의 맛, 르 꼬르동 블루-숙명 아카데미 “타이 퀴진 마스터 클래스” 개최</h3>
+                        <p class="n1">자세히 보기</p>
+                        <p class="n2">오는 5월 19일, 20일 양일간 ‘타이 퀴진 마스터 클래스(Thai Cuisine Master Class)’를 개최한다.
+                            이번 특강을 위해 주한태국대사관의 초청으로 후토(Huto)셰프가 직접 방한, 태국 요리의 진수를 전수한다.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination nap"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next naa"></div>
+            <div class="swiper-button-prev naa"></div>
+
+        </div>
+
+    </section>
+
+
+    <a href="#header" class="top">
+        TOP
+    </a>
+
+    <section class="se4">
+        <div class="text">
+            <h2>Location</h2>
+            <p>인터내셔널 사이트로 돌아가기</p>
+        </div>
+
+        <div class="map">
+
+            <a href="https://www.cordonbleu.edu/online/learning/en" class="dot d1">
+                <div>
+                    <p>Online</p>
+                    <p>Herengracht 28<br>
+                        Amsterdam , 1015 BL, Netherlands<br>
+                        Netherlands</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/seoul/introduction/ko" class="dot d2">
+                <div>
+                    <p>Seoul</p>
+                    <p>7th Fl., Continuing Education Bldg.
+                        Sookmyung Women's University, 100, Cheongpa-ro 47-gil
+                        Seoul , Yongsan-gu , 04310
+                        South Korea</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/shanghai/home/en" class="dot d3">
+                <div>
+                    <p>Shanghai</p>
+                    <p>Building 1, No.1458 South Pu Dong Road
+                        Shanghai , Shanghai , 200122
+                        China Mainland</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/kaohsiung/home/zh-hant" class="dot d4">
+                <div>
+                    <p>Kaohsiung</p>
+                    <p>No.1, Songhe Rd<br>
+                        Xiaogang Dist. , Kaohsiung , 81271<br>
+                        Taiwan Region</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/manila/home/en" class="dot d5">
+                <div>
+
+                    <p>Manila</p>
+                    <p>G/F George SK Ty Learning Innovation Wing, Areté, Ateneo de Manila University, Katipunan Avenue
+                        1108
+                        Quezon City
+                        Philippines</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/thailand/home/th" class="dot d6">
+                <div>
+                    <p>Thailand</p>
+                    <p>4, 4/5 Central Tower, 17th-19th Floor, CentralWorld,
+                        Ratchadamri Road, Pathumwan Subdistrict,
+                        Pathumwan District , Bangkok , 10330
+                        Thailand</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/malaysia/home/en" class="dot d7">
+                <div>
+                    <p>Malaysia</p>
+                    <p>Sunway University
+                        No.5, Jalan Universiti,
+                        Sunway City , Selangor Darul Ehsan , 47500
+                        Malaysia</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/perth/home/en" class="dot d8">
+                <div>
+                    <p>Perth</p>
+                    <p>25 Aberdeen Street
+                        Perth , Western Australia , 6000
+                        Australia</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/adelaide/home/en" class="dot d9">
+                <div>
+                    <p>Adelaide</p>
+                    <p>Days Road
+                        Regency Park , South Australia , 5010
+                        Australia</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/melbourne/home/en" class="dot d10">
+                <div>
+                    <p>Melbourne</p>
+                    <P>488 South Road
+                        Moorabbin , Victoria , 3189
+                        Australia</P>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/sydney/home/en" class="dot d11">
+                <div>
+                    <p>Sydney</p>
+                    <p>250 Blaxland Road
+                        Ryde , New South Wales , 2112
+                        Australia</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/brisbane/home/en" class="dot d12">
+                <div>
+                    <p>Brisbane</p>
+                    <p>111 Colchester Street
+                        South Bank , Queensland , 4101
+                        Australia</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/new-zealand/welcome-to-new-zealand/en" class="dot d13">
+                <div>
+                    <p>New Zealand</p>
+                    <p>52 Cuba Street
+                        Te Aro , Wellington , 6011
+                        New Zealand</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/india/home/en" class="dot d14">
+                <div>
+                    <p>India</p>
+                    <p>G D Goenka Education City
+                        Sohna Gurgaon Road
+                        Sohna , Haryana
+                        India</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/lebanon/home/en" class="dot d15">
+                <div>
+                    <p>Lebanon</p>
+                    <p>Tabarja, Kfaryassine
+                        Main Road, BURJ on BAY Hotel
+                        Jounieh
+                        Lebanon</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/istanbul/home/en" class="dot d16">
+                <div>
+                    <p>Istanbul</p>
+                    <p>Özyeğin University, Çekmeköy Campus
+                        Nişantepe Mevkii, Orman Sokak, No:13
+                        Alemdağ, Çekmeköy , Istanbul , 34794
+                        Turkey</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/madrid/inicio/es" class="dot d17">
+                <div>
+                    <p>Madrid</p>
+                    <p>Ctra. Pozuelo-Majadahonda (M-515) Km. 1,800
+                        Pozuelo de Alarcón , Madrid , 28223
+                        Spain</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/paris/accueil/fr" class="dot d18">
+                <div>
+                    <p>Paris</p>
+                    <p>13-15 Quai André Citroën
+                        Paris , 75015
+                        France</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/london/home/en" class="dot d19">
+                <div>
+                    <p>London</p>
+                    <p>15 Bloomsbury Square
+                        London , WC1A2LS
+                        United Kingdom</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/ottawa/en" class="dot d20">
+                <div>
+                    <p>Ottawa</p>
+                    <p>453 Laurier Avenue East
+                        Ottawa , Ontario , K1N 6R4
+                        Canada</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/usa/home/en" class="dot d21">
+                <div>
+                    <p>USA</p>
+                    <p>1460 broadway New York, NY
+                        10036, United States
+                    </p>
+
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/mexico/inicio/mx" class="dot d22">
+                <div>
+                    <p>Mexico</p>
+                    <p>Av. Lomas Anahuac No. 46
+                        Lomas Anahuac Huixquilucan
+                        Mexico , Edo. de Mex. , C.P. 52786
+                        Mexico</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/peru/home/en" class="dot d23">
+                <div>
+                    <p>Peru</p>
+                    <p>Av. Nuñez de Balboa 530
+                        Miraflores , Lima , Lima 18
+                        Peru</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/sao-paulo/home/pt-br" class="dot d24">
+                <div>
+                    <p>Sao Paulo</p>
+                    <p>Natingui Street, 862 1st Floor, Vila Madalena
+                        São Paulo , SP , 05443-001
+                        Brazil</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/rio-de-janeiro/home/pt-br" class="dot d25">
+                <div>
+                    <p>Rio de Janeiro</p>
+                    <p>Passagem Street, 179, Botafogo
+                        Rio de Janeiro , RJ , 22290-031
+                        Brazil</p>
+                </div>
+            </a>
+
+
+        </div>
+    </section>
+
+    <div class="se5">
+        <div class="inner">
+            <div class="button online"><span>온라인 문의</span></div>
+
+            <div class="personal open">
+                <div class="pb">
+                    <p>예비</p>
+                    <p>수강생</p>
+                </div>
+                <div class="pb">
+                    <p>현재</p>
+                    <p>수강생</p>
+                </div>
+                <div class="pb">
+                    <p>일반</p>
+                    <p>문의</p>
+                </div>
+            </div>
+            <form class="formopen">
+                <p><input type="text" id="first-name" placeholder="성" title="성 입력"></p>
+                <p><input type="text" id="name" placeholder="이름" title="이름 입력"></p>
+                <p><input type="email" id="email" placeholder="이메일" title="이메일 입력"></p>
+                <p><input type="tel" id="tel" placeholder="전화번호" title="전화번호 입력"></p>
+                <p>문의사항
+                    <select>
+                        <option selected="selected">기타</option>
+                        <option>웹사이트 기술 지원</option>
+                        <option>재학생 및 졸업생 관련</option>
+                        <option>지원 및 입학 관련</option>
+                        <option>프로그램 관련</option>
+                    </select>
+                </p>
+                <p><input type="checkbox" name="receive">뉴스레터를 수신하겠습니다.</p>
+                <p>메세지를 입력하세요.<br>
+                    <textarea rows="2" cols="100"></textarea>
+                </p>
+            </form>
+            <div class="button open"><span>신청</span></div>
+
+        </div>
+
+        <p class="notice open">
+            이 양식을 제출함으로써, 르 꼬르동 블루로부터 전자 메세지를 수신하는 것에 동의합니다. 저희는 귀하의 개인정보를 존중하며, 본인의 동의 없이 개인정보를 외부에 제공하지 않습니다. 모든
+            커뮤니케이션은 르 꼬르동 블루를 통해 이루어지며 언제든지 이메일 하단에 있는 "수신거부" 링크를 클릭하거나 저희에게 직접 연락하여 전자 메세지 수신 동의를 철회할 수 있습니다.
+        </p>
+    </div>
+
+    <footer>
+        <div class="inner footer">
+            <div class="left">
+                <div class="fo">
+                    <div>
+                        <span>le cordon bleu</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <span>연락처 안내</span>
+                    <span>이용약관</span>
+                    <span>개인정보취급방침</span>
+                    <span>쿠키 정책</span>
+                    <span>사이트맵</span>
+                </div>
+                <address>
+                    서울특별시 용산구 정파로 47길 100, 숙명여자대학교 사회교육관 7층, 04310<br>
+                    <a href="tel:02-719-6961">T.02-719-6961</a>
+                    <span>F.02-719-7569</span>
+                </address>
+                <p>Copyright © 2021 Le Cordon Bleu International B.V. All Rights Reserved.</p>
+            </div>
+
+            <ul class="ffoo">
+                <li>
+                    <div><span>제휴안내</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <ul class="sub">
+                        <li>레스토랑</li>
+                        <li>파트너쉽</li>
+                        <li>인재채용</li>
+                        <li>컨설팅</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div><span>부띠끄</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <ul class="sub">
+                        <li>USA 부띠끄</li>
+                        <li>유럽 부띠끄</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div><span>포털 서비스</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <ul class="sub">
+                        <li>재학생</li>
+                        <li>동문 네트워크</li>
+                        <li>업계 채용 담당자</li>
+                        <li>유학원</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <div class="inner snsicon">
+            <span><i class="fab fa-facebook-f"></i></span>
+            <span><i class="fab fa-twitter"></i></span>
+            <span><i class="fab fa-instagram"></i></span>
+            <span><i class="fab fa-youtube"></i></span>
+            <span><i class="fab fa-pinterest"></i></span>
+            <span><i class="fab fa-linkedin-in"></i></span>
+            <span><i class="fab fa-google-plus"></i></span>
+            <span><i class="fas fa-blog"></i></span>
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="/js/jquery.cookie.js"></script>
+
+    <script src="../js/project3.js"></script>
+
+</body>
+
+</html>

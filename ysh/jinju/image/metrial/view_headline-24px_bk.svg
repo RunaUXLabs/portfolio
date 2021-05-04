@@ -1,0 +1,15 @@
+<svg id="view_headline-24px_whithe" xmlns="http://www.w3.org/2000/svg" width="40" height="37.686" viewBox="0 0 40 37.686">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #000000;
+      }
+    </style>
+  </defs>
+  <path id="패스_4" data-name="패스 4" class="cls-1" d="M0,0H40V37.686H0Z"/>
+  <path id="패스_5" data-name="패스 5" class="cls-2" d="M4,29.17H40.921V24.336H4Zm0,9.668H40.921V34H4ZM4,19.5H40.921V14.668H4ZM4,5V9.834H40.921V5Z" transform="translate(-2.46 -3.076)"/>
+</svg>
