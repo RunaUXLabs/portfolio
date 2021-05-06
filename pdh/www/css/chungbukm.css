@@ -141,6 +141,7 @@
 }
 .top01{
     background: url(../images/pp/realback_02.jpg) 0 0 no-repeat;
+    background-size: cover;
 }
 .top02{
     background: url(../images/pp/back2_02.jpg) 0 0 no-repeat;
@@ -891,7 +892,7 @@
 }
 .bgbox2{
     width: 100%; height: 300px;
-    margin-top: 50px;
+    margin-top: 0;
 
 }
 .btn5{
@@ -1027,8 +1028,64 @@
     margin-left: 30px;
 }
 .flexbox8{
-    display: none;
+    background: url(../images/pp/this_02.jpg) 0 0 no-repeat;
+    width: 100%;
+    height: 250px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.font8{
+    width: 100%; height: 250px;
+    margin: 0 auto;
+    display: flex; text-align: center;
+    flex-direction: column;
+    position: relative;
+}
+.font8 > h2{
+    font-size: 25px; color: white;
+    font-family : KoPubDotumLight;
+    margin-bottom: 20px; margin-top: 70px;
+}
+.font8 > p:last-child{
+    font-size: 15px; color: white;
+    font-family : KoPubDotumLight;
+    margin-bottom: 20px;
 }
 .flexbox9{
-    display: none;
+    width: 100%;
+    height: 187px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.box9{
+    width: 100%;
+    height: 187px;
+    margin: 0 auto;
+}
+.font9{
+    width: 100%; height: 18px; font-family: KoPubDotumBold; font-size: 12px; margin-top: 50px;
+    align-items: center;
+    color: #777;
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+}
+.font9 > span{
+    color: #0080b4;
+}
+.font99{
+    width: 100%; height: 18px; font-family: KoPubDotumBold; font-size: 12px; margin-top: 20px;
+    align-items: center;
+    color: #777;
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+}
+.font999{
+    width: 100%; height: 18px; font-family: KoPubDotumBold; font-size: 12px; margin-top: 20px;
+    align-items: center;
+    color: #777;
+    display: flex; flex-direction: row;
+    justify-content: space-between;
 }
