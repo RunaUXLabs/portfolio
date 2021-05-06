@@ -55,6 +55,11 @@ body > .inner .mallbar{
     display: none;
 }
 
+/* mobile nav */
+.mnav{
+    display: none;
+}
+
 
 /*navigation */
 nav ul{
@@ -140,28 +145,28 @@ nav .menu .brandmenu .submenu_first{
     top: 101%;
     left: 0;
     width: 100%;
-    height: 58vh;
+    height: 60vh;
     background: rgba(255, 255, 255, 1);
     display: none;
 }
 nav .menu .submenu li:first-child .submenu_first,
 nav .menu .submenu li:nth-child(3) .submenu_first{
-    height: 35vh;
+    height: 42vh;
 }
 nav .menu .submenu li:nth-child(2) .submenu_first{
-    height: 40vh;
+    height: 45vh;
 }
 nav .menu .submenu li:nth-child(4) .submenu_first{
-    height: 9vh;
+    height: 12vh;
 }
 nav .menu .submenu:last-child .submenu_first{
-    height: 9vh;
+    height: 12vh;
 }
 nav .menu .brandmenu li:nth-child(2) .submenu_first{
-    height: 35vh;
+    height: 47vh;
 }
 nav .menu .brandmenu li:last-child .submenu_first{
-    height: 56vh;
+    height: 72vh;
 }
 nav .menu .submenu > li:hover .submenu_first,
 nav .menu .brandmenu > li:hover .submenu_first{
@@ -195,11 +200,8 @@ nav .menu .brandmenu .submenu_first > li > a{
     color: #202020;
 }
 nav .menu .brandmenu .submenu_first .submenu_second{
-    width: 15%;
     display: flex;
     flex-flow: column wrap;
-    position: absolute;
-    top: 60px;
 }
 nav .menu .submenu .submenu_first .submenu_second{
     width: 100%;
@@ -208,10 +210,10 @@ nav .menu .submenu .submenu_first .submenu_second{
     justify-content: center;
 }
 nav .menu .brandmenu .submenu_first .submenu_second{
-    width: 12.5%;
+    width: 100%;
 }
 nav .menu .brandmenu li:last-child .submenu_first .submenu_second{
-    width: 14.5%;
+    width: 100%;
 }
 nav .menu .submenu .submenu_first .submenu_second > li,
 nav .menu .brandmenu .submenu_first .submenu_second > li{
@@ -292,6 +294,12 @@ nav .menu .brandmenu .submenu_first .submenu_second li a:hover{
     color: #c60d41;
 }
 
+/* @media (hover: hover) {
+	
+} */
+
+
+
 /* common style */
 
 /* 'section > a' common style */
@@ -309,7 +317,7 @@ nav .menu .brandmenu .submenu_first .submenu_second li a:hover{
     border-radius: 30px;
     text-align: center;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 300;
     transition: all 0.6s ease-out;
 }
 .intro .inner .introduction a:hover,
@@ -619,8 +627,8 @@ section.business{
 }
 .business .box .wrapper > p > span{
     font-size: 1.8rem;
-    font-weight: 500;
-    color: #99e2ff;
+    font-weight: 700;
+    color: #fff;
 }
 .business .box .wrapper .subbox.maincircle > div:first-child{
     display: flex;
@@ -682,13 +690,14 @@ section.business{
 section.investment{
     background: url(../images/invest.png) 0 0 no-repeat;
     background-size: cover;
-    /* background-color: rgb(0, 0, 0, 0.2);
-    background-blend-mode: multiply; */
+    background-color: rgb(0, 0, 0, 0.2);
+    background-blend-mode: multiply;
 }
 .investment h2{
     font-size: 3.2rem;
     font-weight: 500;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
+    color: #fff;
 }
 .basicSwiper .swiper-slide.swiper-slide-active .investment h2 {
     animation: text2 1.8s .2s both;
@@ -716,11 +725,13 @@ section.investment{
 .investment .box .subbox.description p{
     font-size: 1.7rem;
     font-weight: 700;
+    color: #fff;
 }
 .investment .box .subbox.description span{
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 300;
     margin-bottom: 20px;
-    color: #404040;
+    color:#fff;
 }
 .investment > p {
     margin-bottom: 30px;
@@ -730,7 +741,7 @@ section.investment{
 }
 .investment > a {
     width: 300px;
-    color: #000;
+    color: #fff;
 }
 .investment .box .subbox.description p.mark::before{
     display: block;
@@ -782,7 +793,7 @@ section.news{
 }
 .news .box .subbox{
     width: 23%;
-    height: 250px;
+    height: 270px;
     /* border: 2px solid #cdd0cb; */
     background-color: #fff;
     transition: transform 250ms ease-in-out;
@@ -795,7 +806,7 @@ section.news{
 }
 .news .box .subbox .image{
     width: 100%;
-    height: 135px;
+    height: 155px;
 }
 .news .box .subbox .image.news1{
     background: url(../images/thefirstimage.jpg
@@ -812,21 +823,21 @@ section.news{
 }
 .news .box .subbox .image.news4{
     background: url(../images/activity.png) 50% 0 no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .news .box .subbox .image.news5{
     background: url(../images/newsletter.png) 70% 0 no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .news .box .subbox .image.news6{
     background: url(../images/charitryimage.png) 0 0 no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .news .box .subbox > p {
     font-size: 1.1rem;
     font-weight: 400;
     text-align: justify;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .news .box .subbox > span {
     margin-top: 10px;
@@ -968,12 +979,13 @@ section.hr{
         transform: translateY(-15px);
     }
 }
-.footarrow{
-    display: none;
-}
+
 
 
 /* footer */
+.footarrow{
+    display: none;
+}
 .basicSwiper .swiper-slide.swiper-slide-active footer{
     animation: text1 1.2s 1.5s both;
 }

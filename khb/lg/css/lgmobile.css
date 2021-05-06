@@ -14,6 +14,9 @@ body > .inner > a{
     left: 10px;
     top: 30px;
 }
+body > .inner > a.on{
+    display: none;
+}
 
 /*m_menu*/
 body > .inner .mallbar{
@@ -22,7 +25,7 @@ body > .inner .mallbar{
     color: #fff;
     position: fixed;
     right: 10px;
-    top: 10px;
+    top: 5px;
     z-index: 100;
 }
 body > .inner .mallbar.on{
@@ -53,135 +56,124 @@ body > .inner .mallbar.on{
 }
 .swiper-button-next{
     display: block;
+    right: 8px;
 }
 
 
-
-/* navigation */
-nav{
+/* mobile navigaition */
+.mnav{
     display: block;
-    width: 100%;
-    min-width: 95%;
-    height: auto;
+    top: 0;
     left: 0;
-    transform: translateX(0);
-    padding-top: 0;
-}
-nav .menu{
-    flex-flow: column wrap;
+    z-index: 99;
+    width: 100%;
+    height: auto;
     display: none;
 }
-nav .menu.on{
+.mnav.on{
+    display: block;
+}
+.mnav ul{
+    list-style: none;
+}
+.mnav .m_menu .depth1 .mnav_logo{
+    display: inline-block;
+    background: url(../images/circle_logo.png) 0 0 no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 10px 0 10px;
+}
+.mnav .m_menu{
+    width: 100%;
+    height: 85vh;
+    background-color: #fff;
+    overflow-y: scroll;
     display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding-top: 20px;
 }
-nav .menu > li{
-    height: 40px;
-    line-height: 40px;
+.mnav .m_menu .depth1{
+    width: 100%;
+    height: auto;
+    text-align: center;
 }
-nav .menu > li > a{
-    font-size: 1.3rem;
+.mnav .m_menu .depth1 > a{
+    font-size: 1.2rem;
     font-weight: 400;
 }
-nav .menu > li:nth-child(2) > a{
+.mnav .m_menu .depth1 .m_menu_1{
+    margin: 10px 0 10px 0;
+}
+.mnav .m_menu .depth1 .m_menu_1 .depth2 > a{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.mnav .m_menu .depth1 .m_menu_1 > .depth2 > a.on{
+    color: #c60d41;
+}
+.mnav .m_menu .depth1 .m_menu_1 .depth2{
+    height: auto;
+}
+.mnav .m_menu .depth1 .m_menu_1 .depth2 .m_menu_2,
+.mnav .m_menu .depth1 .m_menu_1 .depth2 .m_menu_2_1{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.mnav .m_menu .depth1 .m_menu_1 .depth2 .m_menu_2 .depth3 > a,
+.mnav .m_menu .depth1 .m_menu_1 .depth2 .m_menu_2_1 .depth3 > a{
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+/* brand arrange */
+.mnav .m_menu .depth1:last-child .m_menu_1 .depth2:first-child .m_menu_2{
+    display: flex;
+    flex-flow: row wrap;
+}
+.mnav .m_menu .depth1:last-child .m_menu_1 .depth2:first-child .m_menu_2 > li{
+    width: 50%;
+}
+.mnav .m_searching{
+    display: flex;
+    justify-content: space-between;
+    width: 67%;
+    font-size: 2rem;
+    color: #c60d41;
+    padding-top: 10px;
+
+}
+.fa, .fas {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 500;
+    padding-top: 15px;
+}
+.mnav .m_searching .lang{
+    display: inline-block;
+    border: 1px solid #c60d41;
+    margin: 0 3px;
+    border-radius: 50%;
     width: 40px;
     height: 40px;
-}
-nav .menu .submenu,
-nav .menu .brandmenu{
-    flex-flow: column wrap;
-    border-bottom: 1px solid #ccc;
-    display: none;
-}
-nav .menu > li:hover .submenu,
-nav .menu > li:hover .brandmenu{
-    display: unset;
-}
-nav .menu .submenu.on,
-nav .menu .brandmenu.on{
-    display: flex;
-}
-nav .menu .submenu > li,
-nav .menu .brandmenu > li{
-    width: 100%;
-    height: 40px;
     line-height: 40px;
+    font-size: 0.9rem;
+    text-align: center;
+
 }
-nav .menu .submenu > li > a,
-nav .menu .brandmenu > li > a
-{
-    font-size: 1rem;
-}
-nav .menu .brandmenu > li:first-child ul.submenu_first > li > a{
-    font-size: 0.85rem;
-}
-nav .menu .submenu .submenu_first,
-nav .menu .brandmenu .submenu_first{
-    flex-flow: column wrap;
-    top: 100%;
-    border-top: 1px solid #ccc;
+
+
+
+
+
+
+
+
+/* pc navigation */
+nav{
     display: none;
 }
-/* nav .menu .submenu > li:hover .submenu_first,
-nav .menu .brandmenu > li:hover .submenu_first{
-    display: unset;
-} */
-nav .menu .submenu .submenu_first.on,
-nav .menu .brandmenu .submenu_first.on{
-    display: flex;
-}
-nav .menu .submenu li:first-child .submenu_first,
-nav .menu .submenu li:nth-child(2) .submenu_first,
-nav .menu .submenu li:nth-child(3) .submenu_first{
-    height: auto;
-}
-nav .menu .submenu li:nth-child(4) .submenu_first{
-    height: auto;
-}
-nav .menu .submenu:last-child .submenu_first{
-    height: auto;
-}
-nav .menu .brandmenu li:nth-child(2) .submenu_first{
-    height: auto;
-}
-nav .menu .brandmenu li:last-child .submenu_first{
-    height: auto;
-}
-nav .menu .submenu .submenu_first > li,
-nav .menu .brandmenu .submenu_first > li
-{ 
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    padding-top: 0;
-}
-nav .menu .brandmenu > li:first-child ul.submenu_first > li{
-    width: 25%;
-    height: 20px;
-    line-height: 20px;
-}
-nav .menu .submenu .submenu_first > li > a,
-nav .menu .brandmenu .submenu_first > li > a{
-    font-size: 1rem;
-}
-nav .menu .submenu .submenu_first .submenu_second, nav .menu .brandmenu .submenu_first .submenu_second{
-    display: none;
-}
-nav .menu .submenu li:first-child .submenu_first > li:first-child::before,
-nav .menu .submenu li:nth-child(2) .submenu_first > li:first-child::before,
-nav .menu .submenu li:nth-child(3) .submenu_first > li:first-child::before{
-    display: none;
-}
-.searching{
-    top: 25px;
-    right: 18%;
-}
-.searching > form{
-    display: none;
-}
-.searching > span > i{
-    font-size: 1.8rem;
-    color: #fff;
-}
+
 
 
 /* intro*/
@@ -322,9 +314,12 @@ section.investment{
 .investment .box .subbox.description p{
     font-size: 1.5rem;
 }
+.investment .box .subbox.description span:first-of-type{
+    margin-bottom: 10px;
+}
 .investment .box .subbox.description span{
     font-size: 0.9rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .investment > p {
     margin-bottom: 20px;
@@ -335,13 +330,14 @@ section.investment{
 .investment > a{
     width: 150px;
     height: 50px;
-    line-height: 50px;
+    line-height: 45px;
     font-size: 1.2rem;
 }
 .investment .box .subbox.description p.mark::before{
-    width: 110px;
-    height: 110px;
-    left: 30%;
+    width: 120px;
+    height: 120px;
+    left: 25%;
+    top: 15px;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
     margin: -5px 4px;
@@ -370,21 +366,26 @@ section.investment{
 .news .clip{
     flex-flow: column wrap;
     justify-content: flex-start;
+    align-items: flex-start;
     margin-top: 10px;
+    width: 100%;
 }
 iframe{
     display: none;
 }
+.news .clip .subbox{
+    width: 100%;
+}
 .news .clip .subbox .event{
-    background-size: contain;
-    width: 235px;
+    background-size: cover;
+    width: 100%;
     height: 120px;
-    margin-left: -20px;
+    margin-left: 0;
 }
 .news .clip .subbox > div:last-child > div > i{
     font-size: 1.8rem;
     margin: 0 5px 0 5px;
-    padding-top: 5px;
+    padding-top: 10px;
 }
 
 

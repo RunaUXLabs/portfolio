@@ -59,7 +59,7 @@ var iw = window.innerWidth;
 if(iw < 641) {
     var swiper3 = new Swiper('.swiper-container.subSwiper2', {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 10,
         freeMode: true,
         loop: true,
         pagination: {
@@ -111,46 +111,28 @@ function counting() {
 
 
 $(document).ready(function(){
-    
+
     //nav togglebutton
     $(".mallbar").click(function(){
         $(this).toggleClass("on");
-        $(".menu").toggleClass("on");
+        $(".mnav").toggleClass("on");
+        $("body > .inner > a").toggleClass("on");
     })
 
+    //mnav 
+    $(".m_menu_2").hide();
+    $(".m_menu_1 > .depth2 > a").click(function(){
+        $(this).next().slideToggle(300);
+         //after (this)'s next part toggle
+        $(this).toggleClass("on").parent().siblings().children("a").removeClass("on");   
+        //changing text color
 
 
 
-    //nav click effect
-    $(".menu > li > a").click(function(){
-        $(this).toggleClass('on').siblings().removeClass('on');
-        if($(this).hasClass('on')){
-            $(this).next().removeClass('on');
-        } else {
-            $(this).next().addClass('on');
-        }
-        $(".menu > li > a").not(this).next().removeClass('on');
+        $(".m_menu_1 > .depth2 > a").not(this).next().slideUp(300);
+        return false;
+        //next part toggle's canceling and after slideup --> the other things are not showing
     });
-
-    $(".submenu > li > a").click(function(){
-        $(this).toggleClass('on').siblings().removeClass('on');
-        if($(this).hasClass('on')){
-            $(this).next().removeClass('on');
-        } else {
-            $(this).next().addClass('on');
-        }
-        $(".submenu > li > a").not(this).next().removeClass('on');
-    });
-    $(".brandmenu > li > a").click(function(){
-        $(this).toggleClass('on').siblings().removeClass('on');
-        if($(this).hasClass('on')){
-            $(this).next().removeClass('on');
-        } else {
-            $(this).next().addClass('on');
-        }
-        $(".brandmenu > li > a").not(this).next().removeClass('on');
-    });
-
     
 
 
@@ -169,7 +151,7 @@ $(document).ready(function(){
     
 });
 
-
+//website connection
 function openSite(select)
 {
     if(select.value!='none') {
